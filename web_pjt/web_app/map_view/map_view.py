@@ -43,9 +43,9 @@ class Map_View:
     for idx, row in self.fish2.iterrows():
       folium.Marker(
           location=[row['위도_기준항'], row['경도_기준항']],
-          icon=folium.Icon(color='lightsalmon', icon='home'),
-          tooltip = row['기준항'],
-          popup= folium.Popup(f"기준항: {row['기준항']}<br> 기준지역: {row['기준지역']}<br> 위치: {row['위도_기준항']}, {row['경도_기준항']}",min_width=150, max_width=200)
+          icon=folium.Icon(color='teal',icon="ship",icon_color="white", prefix="fa"),
+          tooltip = f"<h5>{row['기준항']}⚓</h5>",
+          popup= folium.Popup(f"<h5>⚓기준항: {row['기준항']}</h5><p>✔️기준지역: {row['기준지역']}</p><p>✔️위치정보: {row['위도_기준항']} / {row['경도_기준항']}</p>",min_width=150, max_width=200)
       ).add_to(self.m)
     ##using legend
     # html_itms = ""
