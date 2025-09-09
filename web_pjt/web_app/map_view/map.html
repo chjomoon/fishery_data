@@ -17,10 +17,10 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_71432ac4df3554a09f44685e5d841a1f {
+                #map_b1844706e488c3eb5899a2ab90ae153b {
                     position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
+                    width: 1000.0px;
+                    height: 650.0px;
                     left: 0.0%;
                     top: 0.0%;
                 }
@@ -54,14 +54,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_71432ac4df3554a09f44685e5d841a1f" ></div>
+            <div class="folium-map" id="map_b1844706e488c3eb5899a2ab90ae153b" ></div>
         
 </body>
 <script>
     
     
-            var map_71432ac4df3554a09f44685e5d841a1f = L.map(
-                "map_71432ac4df3554a09f44685e5d841a1f",
+            var map_b1844706e488c3eb5899a2ab90ae153b = L.map(
+                "map_b1844706e488c3eb5899a2ab90ae153b",
                 {
                     center: [37.566, 126.979],
                     crs: L.CRS.EPSG3857,
@@ -78,15 +78,15 @@
 
         
     
-            var tile_layer_4d89c3da5dd0905c42253f9b8855c2d2 = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            var tile_layer_60928dd6e9308aa08354e4607fb4360b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -95,48 +95,48 @@
             );
         
     
-            tile_layer_4d89c3da5dd0905c42253f9b8855c2d2.addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            tile_layer_60928dd6e9308aa08354e4607fb4360b.addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var marker_4de229255f5385995da764c08a1f5a73 = L.marker(
-                [36.9539, 129.4038],
+            var marker_4ff286a1061619e7096132230c2ac8d4 = L.marker(
+                [37.8954, 128.8314],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_36f366c6674e33b46404e2aee13ef234 = L.AwesomeMarkers.icon(
+            var icon_f508362ec385a49467c69f7a379e3621 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#f8fcc3",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_b2f7990de42d7c812ba06fe24f4e453f = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_e3a217faae56a0331385226577a9452b = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_ec403a19f31e820d7a84ce97aa09c014 = $(`<div id="html_ec403a19f31e820d7a84ce97aa09c014" style="width: 100.0%; height: 100.0%;">기준항: 경북 울진군 기준지역: 경북</div>`)[0];
-                popup_b2f7990de42d7c812ba06fe24f4e453f.setContent(html_ec403a19f31e820d7a84ce97aa09c014);
+                var html_ff80698e0dde69747b93740d9e84022a = $(`<div id="html_ff80698e0dde69747b93740d9e84022a" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 강원 강릉시</h5><p>✔️기준지역: 고성</p><p>✔️위치정보: 37.8954 / 128.8314</p></div>`)[0];
+                popup_e3a217faae56a0331385226577a9452b.setContent(html_ff80698e0dde69747b93740d9e84022a);
             
         
 
-        marker_4de229255f5385995da764c08a1f5a73.bindPopup(popup_b2f7990de42d7c812ba06fe24f4e453f)
+        marker_4ff286a1061619e7096132230c2ac8d4.bindPopup(popup_e3a217faae56a0331385226577a9452b)
         ;
 
         
     
     
-            marker_4de229255f5385995da764c08a1f5a73.bindTooltip(
+            marker_4ff286a1061619e7096132230c2ac8d4.bindTooltip(
                 `<div>
-                     경북 울진군
+                     <h5>강원 강릉시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -144,48 +144,48 @@
             );
         
     
-                marker_4de229255f5385995da764c08a1f5a73.setIcon(icon_36f366c6674e33b46404e2aee13ef234);
+                marker_4ff286a1061619e7096132230c2ac8d4.setIcon(icon_f508362ec385a49467c69f7a379e3621);
             
     
-            var marker_44905730f6044b265a439ac0e8672f4e = L.marker(
-                [33.3929, 126.2746],
+            var marker_ddf2ecceb83ac4fb592520c765d424e0 = L.marker(
+                [38.4051, 128.4471],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_e2254772f5160bc3dd604b01c816da8f = L.AwesomeMarkers.icon(
+            var icon_8002e22c81bf3e7ab4d91d485e02c893 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#f8fcc3",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_223a29e82a7bb77e4b5d3cb5d8255227 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_c33ed24e3939208cfc2d74ea221741b6 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_5b0c5ee4ffe4e3cf6e0d66c2ad892469 = $(`<div id="html_5b0c5ee4ffe4e3cf6e0d66c2ad892469" style="width: 100.0%; height: 100.0%;">기준항: 제주시 기준지역: 제주</div>`)[0];
-                popup_223a29e82a7bb77e4b5d3cb5d8255227.setContent(html_5b0c5ee4ffe4e3cf6e0d66c2ad892469);
+                var html_dcec89ecd2e8f96ffca37e1460a207bf = $(`<div id="html_dcec89ecd2e8f96ffca37e1460a207bf" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 강원 고성군</h5><p>✔️기준지역: 고성</p><p>✔️위치정보: 38.4051 / 128.4471</p></div>`)[0];
+                popup_c33ed24e3939208cfc2d74ea221741b6.setContent(html_dcec89ecd2e8f96ffca37e1460a207bf);
             
         
 
-        marker_44905730f6044b265a439ac0e8672f4e.bindPopup(popup_223a29e82a7bb77e4b5d3cb5d8255227)
+        marker_ddf2ecceb83ac4fb592520c765d424e0.bindPopup(popup_c33ed24e3939208cfc2d74ea221741b6)
         ;
 
         
     
     
-            marker_44905730f6044b265a439ac0e8672f4e.bindTooltip(
+            marker_ddf2ecceb83ac4fb592520c765d424e0.bindTooltip(
                 `<div>
-                     제주시
+                     <h5>강원 고성군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -193,48 +193,48 @@
             );
         
     
-                marker_44905730f6044b265a439ac0e8672f4e.setIcon(icon_e2254772f5160bc3dd604b01c816da8f);
+                marker_ddf2ecceb83ac4fb592520c765d424e0.setIcon(icon_8002e22c81bf3e7ab4d91d485e02c893);
             
     
-            var marker_08668b71b1e932748135816a8aaa968a = L.marker(
-                [38.4327, 128.4368],
+            var marker_cde8d60b302bd80f74f52c422cd21cc5 = L.marker(
+                [37.5245, 129.1146],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_89e3a062f124bd294bd5b8517b18a2c2 = L.AwesomeMarkers.icon(
+            var icon_4c73dab4c06f26676b35da9fcd3b5ecd = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#8ccf81",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_11836165b48500496a3a6a0c276f037b = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_8613ab5da045186ee2cd9f072dcb7a48 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_78a53530e3f37de5f740ea359e66ba94 = $(`<div id="html_78a53530e3f37de5f740ea359e66ba94" style="width: 100.0%; height: 100.0%;">기준항: 강원 고성군 기준지역: 강원</div>`)[0];
-                popup_11836165b48500496a3a6a0c276f037b.setContent(html_78a53530e3f37de5f740ea359e66ba94);
+                var html_b9365f1c87142589ee0ee467cc88a513 = $(`<div id="html_b9365f1c87142589ee0ee467cc88a513" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 강원 동해시</h5><p>✔️기준지역: 삼척</p><p>✔️위치정보: 37.5245 / 129.1146</p></div>`)[0];
+                popup_8613ab5da045186ee2cd9f072dcb7a48.setContent(html_b9365f1c87142589ee0ee467cc88a513);
             
         
 
-        marker_08668b71b1e932748135816a8aaa968a.bindPopup(popup_11836165b48500496a3a6a0c276f037b)
+        marker_cde8d60b302bd80f74f52c422cd21cc5.bindPopup(popup_8613ab5da045186ee2cd9f072dcb7a48)
         ;
 
         
     
     
-            marker_08668b71b1e932748135816a8aaa968a.bindTooltip(
+            marker_cde8d60b302bd80f74f52c422cd21cc5.bindTooltip(
                 `<div>
-                     강원 고성군
+                     <h5>강원 동해시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -242,48 +242,48 @@
             );
         
     
-                marker_08668b71b1e932748135816a8aaa968a.setIcon(icon_89e3a062f124bd294bd5b8517b18a2c2);
+                marker_cde8d60b302bd80f74f52c422cd21cc5.setIcon(icon_4c73dab4c06f26676b35da9fcd3b5ecd);
             
     
-            var marker_f7353d2b729c04279e887d8f16b4b311 = L.marker(
-                [37.1873, 129.3121],
+            var marker_0b7756ca34b2bf3c97bac7f0a53a636a = L.marker(
+                [37.3789, 129.2258],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_bc4a56a14b8c867aa91a7ee1d42fd981 = L.AwesomeMarkers.icon(
+            var icon_f9138ca6325daa0dfbf01a626d441c4b = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#8ccf81",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_a7f891f7fcf72212be2a05c0fe72ef02 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_245e3fde6f1d2e8bc8a7f36c137f8019 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_9e4fca0105515017ec156db1a0a38c77 = $(`<div id="html_9e4fca0105515017ec156db1a0a38c77" style="width: 100.0%; height: 100.0%;">기준항: 강원 삼척시 기준지역: 강원</div>`)[0];
-                popup_a7f891f7fcf72212be2a05c0fe72ef02.setContent(html_9e4fca0105515017ec156db1a0a38c77);
+                var html_bfff4f914258578267134e3717ecc0ae = $(`<div id="html_bfff4f914258578267134e3717ecc0ae" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 강원 삼척시</h5><p>✔️기준지역: 삼척</p><p>✔️위치정보: 37.3789 / 129.2258</p></div>`)[0];
+                popup_245e3fde6f1d2e8bc8a7f36c137f8019.setContent(html_bfff4f914258578267134e3717ecc0ae);
             
         
 
-        marker_f7353d2b729c04279e887d8f16b4b311.bindPopup(popup_a7f891f7fcf72212be2a05c0fe72ef02)
+        marker_0b7756ca34b2bf3c97bac7f0a53a636a.bindPopup(popup_245e3fde6f1d2e8bc8a7f36c137f8019)
         ;
 
         
     
     
-            marker_f7353d2b729c04279e887d8f16b4b311.bindTooltip(
+            marker_0b7756ca34b2bf3c97bac7f0a53a636a.bindTooltip(
                 `<div>
-                     강원 삼척시
+                     <h5>강원 삼척시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -291,48 +291,48 @@
             );
         
     
-                marker_f7353d2b729c04279e887d8f16b4b311.setIcon(icon_bc4a56a14b8c867aa91a7ee1d42fd981);
+                marker_0b7756ca34b2bf3c97bac7f0a53a636a.setIcon(icon_f9138ca6325daa0dfbf01a626d441c4b);
             
     
-            var marker_4900fbb23b37a60b65fc9189b5db204e = L.marker(
-                [34.7958, 128.3892],
+            var marker_636c4bb27e082dd6b4586b41cd8f0547 = L.marker(
+                [38.207, 128.5913],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_088fa431823b5faa0fadd53a559dec2b = L.AwesomeMarkers.icon(
+            var icon_7a9e7a257bbcf5fde0d6bbf1d13c11cf = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#f8fcc3",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_f4e837d963d7e245e9f5ba4e7951fe8d = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_bf97e60d505411def408a28c3288ef6a = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_f651fa3f182782b1da441ed169ed8396 = $(`<div id="html_f651fa3f182782b1da441ed169ed8396" style="width: 100.0%; height: 100.0%;">기준항: 경남 통영시 기준지역: 경남</div>`)[0];
-                popup_f4e837d963d7e245e9f5ba4e7951fe8d.setContent(html_f651fa3f182782b1da441ed169ed8396);
+                var html_48b2b10d5e58a6e4d41bd4e8a78f5fb6 = $(`<div id="html_48b2b10d5e58a6e4d41bd4e8a78f5fb6" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 강원 속초시</h5><p>✔️기준지역: 고성</p><p>✔️위치정보: 38.207 / 128.5913</p></div>`)[0];
+                popup_bf97e60d505411def408a28c3288ef6a.setContent(html_48b2b10d5e58a6e4d41bd4e8a78f5fb6);
             
         
 
-        marker_4900fbb23b37a60b65fc9189b5db204e.bindPopup(popup_f4e837d963d7e245e9f5ba4e7951fe8d)
+        marker_636c4bb27e082dd6b4586b41cd8f0547.bindPopup(popup_bf97e60d505411def408a28c3288ef6a)
         ;
 
         
     
     
-            marker_4900fbb23b37a60b65fc9189b5db204e.bindTooltip(
+            marker_636c4bb27e082dd6b4586b41cd8f0547.bindTooltip(
                 `<div>
-                     경남 통영시
+                     <h5>강원 속초시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -340,48 +340,48 @@
             );
         
     
-                marker_4900fbb23b37a60b65fc9189b5db204e.setIcon(icon_088fa431823b5faa0fadd53a559dec2b);
+                marker_636c4bb27e082dd6b4586b41cd8f0547.setIcon(icon_7a9e7a257bbcf5fde0d6bbf1d13c11cf);
             
     
-            var marker_b05bfb9c3f0495ad22a94e57dd1e65de = L.marker(
-                [33.4195, 126.8775],
+            var marker_6b739b22960930033b3ddd77b2b5b3e6 = L.marker(
+                [37.9687, 128.7606],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_6746ed8bf3b94ca44e733adfb457f2de = L.AwesomeMarkers.icon(
+            var icon_8fcfada36b2b6cd6311a73dcc90699f1 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#f8fcc3",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_2fdfb3550225ffdcd4811660744b5a18 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_a54a78cdf7e59f93ad88ed3a535c05ce = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_ad98ef82bc7150615598ee1d38a91c69 = $(`<div id="html_ad98ef82bc7150615598ee1d38a91c69" style="width: 100.0%; height: 100.0%;">기준항: 서귀포시 기준지역: 제주</div>`)[0];
-                popup_2fdfb3550225ffdcd4811660744b5a18.setContent(html_ad98ef82bc7150615598ee1d38a91c69);
+                var html_61a24427bef6efd180b9362a549d7ef7 = $(`<div id="html_61a24427bef6efd180b9362a549d7ef7" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 강원 양양군</h5><p>✔️기준지역: 고성</p><p>✔️위치정보: 37.9687 / 128.7606</p></div>`)[0];
+                popup_a54a78cdf7e59f93ad88ed3a535c05ce.setContent(html_61a24427bef6efd180b9362a549d7ef7);
             
         
 
-        marker_b05bfb9c3f0495ad22a94e57dd1e65de.bindPopup(popup_2fdfb3550225ffdcd4811660744b5a18)
+        marker_6b739b22960930033b3ddd77b2b5b3e6.bindPopup(popup_a54a78cdf7e59f93ad88ed3a535c05ce)
         ;
 
         
     
     
-            marker_b05bfb9c3f0495ad22a94e57dd1e65de.bindTooltip(
+            marker_6b739b22960930033b3ddd77b2b5b3e6.bindTooltip(
                 `<div>
-                     서귀포시
+                     <h5>강원 양양군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -389,48 +389,48 @@
             );
         
     
-                marker_b05bfb9c3f0495ad22a94e57dd1e65de.setIcon(icon_6746ed8bf3b94ca44e733adfb457f2de);
+                marker_6b739b22960930033b3ddd77b2b5b3e6.setIcon(icon_8fcfada36b2b6cd6311a73dcc90699f1);
             
     
-            var marker_1eb9687b772f746b5533e468b58d84c8 = L.marker(
-                [35.0207, 128.0599],
+            var marker_0a83be7c7693b5c1e14831f4480b2dec = L.marker(
+                [37.6156, 126.7158],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_ec3d73cec779478a2084ce18d9af8ee5 = L.AwesomeMarkers.icon(
+            var icon_1e2a7cc1ec347587e8eaf44d7477edff = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#d5eea1",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_af82145f51bba994b15126e9c9baf7a4 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_f27dba778d9edb8353b88df5501b6054 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_739fc56082f0fdec791323c417b64858 = $(`<div id="html_739fc56082f0fdec791323c417b64858" style="width: 100.0%; height: 100.0%;">기준항: 경남 사천시 기준지역: 경남</div>`)[0];
-                popup_af82145f51bba994b15126e9c9baf7a4.setContent(html_739fc56082f0fdec791323c417b64858);
+                var html_4a05db7d65688fa4f28d150d82dd1310 = $(`<div id="html_4a05db7d65688fa4f28d150d82dd1310" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경기 김포시</h5><p>✔️기준지역: 덕적도</p><p>✔️위치정보: 37.6156 / 126.7158</p></div>`)[0];
+                popup_f27dba778d9edb8353b88df5501b6054.setContent(html_4a05db7d65688fa4f28d150d82dd1310);
             
         
 
-        marker_1eb9687b772f746b5533e468b58d84c8.bindPopup(popup_af82145f51bba994b15126e9c9baf7a4)
+        marker_0a83be7c7693b5c1e14831f4480b2dec.bindPopup(popup_f27dba778d9edb8353b88df5501b6054)
         ;
 
         
     
     
-            marker_1eb9687b772f746b5533e468b58d84c8.bindTooltip(
+            marker_0a83be7c7693b5c1e14831f4480b2dec.bindTooltip(
                 `<div>
-                     경남 사천시
+                     <h5>경기 김포시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -438,48 +438,48 @@
             );
         
     
-                marker_1eb9687b772f746b5533e468b58d84c8.setIcon(icon_ec3d73cec779478a2084ce18d9af8ee5);
+                marker_0a83be7c7693b5c1e14831f4480b2dec.setIcon(icon_1e2a7cc1ec347587e8eaf44d7477edff);
             
     
-            var marker_5ab34a4adb9f2bed4ffe0b7aeac76568 = L.marker(
-                [34.7616, 128.014],
+            var marker_e09eaed237d849baa31bdf5f70d43719 = L.marker(
+                [37.1666, 126.7088],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_baea0435915c6130623eee466b0ad41d = L.AwesomeMarkers.icon(
+            var icon_e3966602224e85d4739479b652bf2ddb = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#d5eea1",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_9d4998139117420fe83f94eb3f381072 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_3f9430df4eae1eae1d2f2e913c1f8a05 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_10fe4a6e3193d039315c2949c4535e0b = $(`<div id="html_10fe4a6e3193d039315c2949c4535e0b" style="width: 100.0%; height: 100.0%;">기준항: 경남 남해군 기준지역: 경남</div>`)[0];
-                popup_9d4998139117420fe83f94eb3f381072.setContent(html_10fe4a6e3193d039315c2949c4535e0b);
+                var html_a0d2e407eaf70eb283809da38d8840b6 = $(`<div id="html_a0d2e407eaf70eb283809da38d8840b6" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경기 화성시</h5><p>✔️기준지역: 덕적도</p><p>✔️위치정보: 37.1666 / 126.7088</p></div>`)[0];
+                popup_3f9430df4eae1eae1d2f2e913c1f8a05.setContent(html_a0d2e407eaf70eb283809da38d8840b6);
             
         
 
-        marker_5ab34a4adb9f2bed4ffe0b7aeac76568.bindPopup(popup_9d4998139117420fe83f94eb3f381072)
+        marker_e09eaed237d849baa31bdf5f70d43719.bindPopup(popup_3f9430df4eae1eae1d2f2e913c1f8a05)
         ;
 
         
     
     
-            marker_5ab34a4adb9f2bed4ffe0b7aeac76568.bindTooltip(
+            marker_e09eaed237d849baa31bdf5f70d43719.bindTooltip(
                 `<div>
-                     경남 남해군
+                     <h5>경기 화성시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -487,48 +487,48 @@
             );
         
     
-                marker_5ab34a4adb9f2bed4ffe0b7aeac76568.setIcon(icon_baea0435915c6130623eee466b0ad41d);
+                marker_e09eaed237d849baa31bdf5f70d43719.setIcon(icon_e3966602224e85d4739479b652bf2ddb);
             
     
-            var marker_f55db18874df308ba731fa7eadd8d64c = L.marker(
-                [36.427, 129.3889],
+            var marker_7b86adc80429719a69c332bd3981d752 = L.marker(
+                [34.91, 128.6212],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_8ec7e662de61a5a0512a56aa00ddbf80 = L.AwesomeMarkers.icon(
+            var icon_58ee55e821ecb5088f14923686429378 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#fafdce",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_0d56a8e45ff2aa96c4ddb21e17478393 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_1970d3014fa9dbc8bfe91d56a2a7e53a = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_ab1cfea78038967c1ef408bd20943c11 = $(`<div id="html_ab1cfea78038967c1ef408bd20943c11" style="width: 100.0%; height: 100.0%;">기준항: 경북 영덕군 기준지역: 경북</div>`)[0];
-                popup_0d56a8e45ff2aa96c4ddb21e17478393.setContent(html_ab1cfea78038967c1ef408bd20943c11);
+                var html_586edfb7bfe508f6ba2cb832e91c7090 = $(`<div id="html_586edfb7bfe508f6ba2cb832e91c7090" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 거제시</h5><p>✔️기준지역: 거제도</p><p>✔️위치정보: 34.91 / 128.6212</p></div>`)[0];
+                popup_1970d3014fa9dbc8bfe91d56a2a7e53a.setContent(html_586edfb7bfe508f6ba2cb832e91c7090);
             
         
 
-        marker_f55db18874df308ba731fa7eadd8d64c.bindPopup(popup_0d56a8e45ff2aa96c4ddb21e17478393)
+        marker_7b86adc80429719a69c332bd3981d752.bindPopup(popup_1970d3014fa9dbc8bfe91d56a2a7e53a)
         ;
 
         
     
     
-            marker_f55db18874df308ba731fa7eadd8d64c.bindTooltip(
+            marker_7b86adc80429719a69c332bd3981d752.bindTooltip(
                 `<div>
-                     경북 영덕군
+                     <h5>경남 거제시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -536,48 +536,48 @@
             );
         
     
-                marker_f55db18874df308ba731fa7eadd8d64c.setIcon(icon_8ec7e662de61a5a0512a56aa00ddbf80);
+                marker_7b86adc80429719a69c332bd3981d752.setIcon(icon_58ee55e821ecb5088f14923686429378);
             
     
-            var marker_788ca183a7c417c62a063e5d3cd48f91 = L.marker(
-                [37.9468, 128.7592],
+            var marker_08fa3c70a229d19638e3eeed277cb2a1 = L.marker(
+                [34.939, 128.2327],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_2e2808a0d41df1e3988126985ea2f252 = L.AwesomeMarkers.icon(
+            var icon_b39b09a13bf4f9fdde1247f1ca539c03 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#7f7f7f",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_a78d9fefb07c1ae31ef889c3e808b5f1 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_c74a87f9be359ef08d4ff4d1002193e2 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_51ff3c1808aba9b948e268b4f5dc013c = $(`<div id="html_51ff3c1808aba9b948e268b4f5dc013c" style="width: 100.0%; height: 100.0%;">기준항: 강원 양양군 기준지역: 강원</div>`)[0];
-                popup_a78d9fefb07c1ae31ef889c3e808b5f1.setContent(html_51ff3c1808aba9b948e268b4f5dc013c);
+                var html_32bf2f03b96ed0ae03f24c8ec7d02698 = $(`<div id="html_32bf2f03b96ed0ae03f24c8ec7d02698" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 고성군</h5><p>✔️기준지역: 거제도</p><p>✔️위치정보: 34.939 / 128.2327</p></div>`)[0];
+                popup_c74a87f9be359ef08d4ff4d1002193e2.setContent(html_32bf2f03b96ed0ae03f24c8ec7d02698);
             
         
 
-        marker_788ca183a7c417c62a063e5d3cd48f91.bindPopup(popup_a78d9fefb07c1ae31ef889c3e808b5f1)
+        marker_08fa3c70a229d19638e3eeed277cb2a1.bindPopup(popup_c74a87f9be359ef08d4ff4d1002193e2)
         ;
 
         
     
     
-            marker_788ca183a7c417c62a063e5d3cd48f91.bindTooltip(
+            marker_08fa3c70a229d19638e3eeed277cb2a1.bindTooltip(
                 `<div>
-                     강원 양양군
+                     <h5>경남 고성군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -585,48 +585,48 @@
             );
         
     
-                marker_788ca183a7c417c62a063e5d3cd48f91.setIcon(icon_2e2808a0d41df1e3988126985ea2f252);
+                marker_08fa3c70a229d19638e3eeed277cb2a1.setIcon(icon_b39b09a13bf4f9fdde1247f1ca539c03);
             
     
-            var marker_f67c9ccbcef916a5dec61a9135a9462c = L.marker(
-                [34.9106, 128.6976],
+            var marker_bbd96e78200bc09bb0d8e979df24ba58 = L.marker(
+                [34.7626, 128.0089],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_ff0efca73da488e3f7629464ef6cd6ff = L.AwesomeMarkers.icon(
+            var icon_5a644668f47d73bd7a628e5a2fa7d12d = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#005f33",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_b2ef014c315665e331af90844c464d67 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_3ed57c92e29ba202c69c57af5172c253 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_6e177621db6a43e6fefe7e180d499731 = $(`<div id="html_6e177621db6a43e6fefe7e180d499731" style="width: 100.0%; height: 100.0%;">기준항: 경남 거제시 기준지역: 경남</div>`)[0];
-                popup_b2ef014c315665e331af90844c464d67.setContent(html_6e177621db6a43e6fefe7e180d499731);
+                var html_c75a8efbad0f8abf1bd82784005371a8 = $(`<div id="html_c75a8efbad0f8abf1bd82784005371a8" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 남해군</h5><p>✔️기준지역: 통영</p><p>✔️위치정보: 34.7626 / 128.0089</p></div>`)[0];
+                popup_3ed57c92e29ba202c69c57af5172c253.setContent(html_c75a8efbad0f8abf1bd82784005371a8);
             
         
 
-        marker_f67c9ccbcef916a5dec61a9135a9462c.bindPopup(popup_b2ef014c315665e331af90844c464d67)
+        marker_bbd96e78200bc09bb0d8e979df24ba58.bindPopup(popup_3ed57c92e29ba202c69c57af5172c253)
         ;
 
         
     
     
-            marker_f67c9ccbcef916a5dec61a9135a9462c.bindTooltip(
+            marker_bbd96e78200bc09bb0d8e979df24ba58.bindTooltip(
                 `<div>
-                     경남 거제시
+                     <h5>경남 남해군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -634,48 +634,48 @@
             );
         
     
-                marker_f67c9ccbcef916a5dec61a9135a9462c.setIcon(icon_ff0efca73da488e3f7629464ef6cd6ff);
+                marker_bbd96e78200bc09bb0d8e979df24ba58.setIcon(icon_5a644668f47d73bd7a628e5a2fa7d12d);
             
     
-            var marker_72cd27a5455985f7ff6e77b32c29eb0a = L.marker(
-                [35.3546, 126.453],
+            var marker_1f60395b97b949ac866b32c812b517be = L.marker(
+                [35.197, 128.5674],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_82a2908282ffa8bbdd2479515a3e53fa = L.AwesomeMarkers.icon(
+            var icon_83ba68f94816f92fb0ca2d3df29cceae = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#fafdce",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_1d918558fe7bd537f2449efa66959158 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_17ece59eacc5618c7da7fbe9c1ef23ce = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_29824c38d33792dda1a403026e0d5375 = $(`<div id="html_29824c38d33792dda1a403026e0d5375" style="width: 100.0%; height: 100.0%;">기준항: 전남 영광군 기준지역: 전남</div>`)[0];
-                popup_1d918558fe7bd537f2449efa66959158.setContent(html_29824c38d33792dda1a403026e0d5375);
+                var html_26bffe10ef87df8bfeeaa102a083fa12 = $(`<div id="html_26bffe10ef87df8bfeeaa102a083fa12" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 마산시</h5><p>✔️기준지역: 거제도</p><p>✔️위치정보: 35.197 / 128.5674</p></div>`)[0];
+                popup_17ece59eacc5618c7da7fbe9c1ef23ce.setContent(html_26bffe10ef87df8bfeeaa102a083fa12);
             
         
 
-        marker_72cd27a5455985f7ff6e77b32c29eb0a.bindPopup(popup_1d918558fe7bd537f2449efa66959158)
+        marker_1f60395b97b949ac866b32c812b517be.bindPopup(popup_17ece59eacc5618c7da7fbe9c1ef23ce)
         ;
 
         
     
     
-            marker_72cd27a5455985f7ff6e77b32c29eb0a.bindTooltip(
+            marker_1f60395b97b949ac866b32c812b517be.bindTooltip(
                 `<div>
-                     전남 영광군
+                     <h5>경남 마산시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -683,48 +683,48 @@
             );
         
     
-                marker_72cd27a5455985f7ff6e77b32c29eb0a.setIcon(icon_82a2908282ffa8bbdd2479515a3e53fa);
+                marker_1f60395b97b949ac866b32c812b517be.setIcon(icon_83ba68f94816f92fb0ca2d3df29cceae);
             
     
-            var marker_df52c1bdf1a958dfda66e6b001644df5 = L.marker(
-                [35.9944, 129.558],
+            var marker_f933d0e5083eee8b0857ecc63adbe0b3 = L.marker(
+                [35.0035, 128.0646],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_086944470e8ee64393b5e1fc87259b7c = L.AwesomeMarkers.icon(
+            var icon_dffd3d548925e389dca7215babafe91e = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#005f33",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_54822bdab76a27e689c8839e7f47f6f4 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_9ebd695d1d76ccb37ac14a48f1bbbf07 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_ab6f11c7c8c9ed1acfe0e9cfb49d5464 = $(`<div id="html_ab6f11c7c8c9ed1acfe0e9cfb49d5464" style="width: 100.0%; height: 100.0%;">기준항: 경북 포항시 기준지역: 경북</div>`)[0];
-                popup_54822bdab76a27e689c8839e7f47f6f4.setContent(html_ab6f11c7c8c9ed1acfe0e9cfb49d5464);
+                var html_ad73ce3374ca8530336fa7af81e7b090 = $(`<div id="html_ad73ce3374ca8530336fa7af81e7b090" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 사천시</h5><p>✔️기준지역: 통영</p><p>✔️위치정보: 35.0035 / 128.0646</p></div>`)[0];
+                popup_9ebd695d1d76ccb37ac14a48f1bbbf07.setContent(html_ad73ce3374ca8530336fa7af81e7b090);
             
         
 
-        marker_df52c1bdf1a958dfda66e6b001644df5.bindPopup(popup_54822bdab76a27e689c8839e7f47f6f4)
+        marker_f933d0e5083eee8b0857ecc63adbe0b3.bindPopup(popup_9ebd695d1d76ccb37ac14a48f1bbbf07)
         ;
 
         
     
     
-            marker_df52c1bdf1a958dfda66e6b001644df5.bindTooltip(
+            marker_f933d0e5083eee8b0857ecc63adbe0b3.bindTooltip(
                 `<div>
-                     경북 포항시
+                     <h5>경남 사천시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -732,48 +732,48 @@
             );
         
     
-                marker_df52c1bdf1a958dfda66e6b001644df5.setIcon(icon_086944470e8ee64393b5e1fc87259b7c);
+                marker_f933d0e5083eee8b0857ecc63adbe0b3.setIcon(icon_dffd3d548925e389dca7215babafe91e);
             
     
-            var marker_2d4226ade941eec41abc44b9cf736914 = L.marker(
-                [35.7983, 129.4864],
+            var marker_08ad2b09111cd4f3c6aac2f224175891 = L.marker(
+                [35.1319, 128.5808],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_7bed2db0112b56eff48d634d730f4c22 = L.AwesomeMarkers.icon(
+            var icon_9d9fc66854cf399cf7312f1269d9e1c9 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#fafdce",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_d3deeed4bc3bd5bdae0ca9b6dcf10b78 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_f01073de0ad7119fdd404235c70d19e7 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_c4d5fced391ecf601638b5f4cc9cc34e = $(`<div id="html_c4d5fced391ecf601638b5f4cc9cc34e" style="width: 100.0%; height: 100.0%;">기준항: 경북 경주시 기준지역: 경북</div>`)[0];
-                popup_d3deeed4bc3bd5bdae0ca9b6dcf10b78.setContent(html_c4d5fced391ecf601638b5f4cc9cc34e);
+                var html_3d74cc94a90ad05964d48b9b3cff5ea6 = $(`<div id="html_3d74cc94a90ad05964d48b9b3cff5ea6" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 창원시</h5><p>✔️기준지역: 거제도</p><p>✔️위치정보: 35.1319 / 128.5808</p></div>`)[0];
+                popup_f01073de0ad7119fdd404235c70d19e7.setContent(html_3d74cc94a90ad05964d48b9b3cff5ea6);
             
         
 
-        marker_2d4226ade941eec41abc44b9cf736914.bindPopup(popup_d3deeed4bc3bd5bdae0ca9b6dcf10b78)
+        marker_08ad2b09111cd4f3c6aac2f224175891.bindPopup(popup_f01073de0ad7119fdd404235c70d19e7)
         ;
 
         
     
     
-            marker_2d4226ade941eec41abc44b9cf736914.bindTooltip(
+            marker_08ad2b09111cd4f3c6aac2f224175891.bindTooltip(
                 `<div>
-                     경북 경주시
+                     <h5>경남 창원시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -781,48 +781,48 @@
             );
         
     
-                marker_2d4226ade941eec41abc44b9cf736914.setIcon(icon_7bed2db0112b56eff48d634d730f4c22);
+                marker_08ad2b09111cd4f3c6aac2f224175891.setIcon(icon_9d9fc66854cf399cf7312f1269d9e1c9);
             
     
-            var marker_9241d3292653b803eb83a84555bbf5b9 = L.marker(
-                [35.227, 129.2167],
+            var marker_e93686a9681e8f25e534f1d74969cc55 = L.marker(
+                [34.8543, 128.4332],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_0d7bf98b3ee6cc4491ea20123d039ca7 = L.AwesomeMarkers.icon(
+            var icon_1751718739db827928f2b18974d13a10 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#fafdce",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_667838ce4f2b1b1e8cef043b3875bcf7 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_ec0f475234ff03b1283bd71c4e1b3207 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_b2b4e0c0fcf3ff11006dcd97311ea415 = $(`<div id="html_b2b4e0c0fcf3ff11006dcd97311ea415" style="width: 100.0%; height: 100.0%;">기준항: 부산시 기장군 기준지역: 부산시</div>`)[0];
-                popup_667838ce4f2b1b1e8cef043b3875bcf7.setContent(html_b2b4e0c0fcf3ff11006dcd97311ea415);
+                var html_c5daf2f9bdf1d10f10a9510565647d71 = $(`<div id="html_c5daf2f9bdf1d10f10a9510565647d71" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 통영시</h5><p>✔️기준지역: 거제도</p><p>✔️위치정보: 34.8543 / 128.4332</p></div>`)[0];
+                popup_ec0f475234ff03b1283bd71c4e1b3207.setContent(html_c5daf2f9bdf1d10f10a9510565647d71);
             
         
 
-        marker_9241d3292653b803eb83a84555bbf5b9.bindPopup(popup_667838ce4f2b1b1e8cef043b3875bcf7)
+        marker_e93686a9681e8f25e534f1d74969cc55.bindPopup(popup_ec0f475234ff03b1283bd71c4e1b3207)
         ;
 
         
     
     
-            marker_9241d3292653b803eb83a84555bbf5b9.bindTooltip(
+            marker_e93686a9681e8f25e534f1d74969cc55.bindTooltip(
                 `<div>
-                     부산시 기장군
+                     <h5>경남 통영시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -830,48 +830,48 @@
             );
         
     
-                marker_9241d3292653b803eb83a84555bbf5b9.setIcon(icon_0d7bf98b3ee6cc4491ea20123d039ca7);
+                marker_e93686a9681e8f25e534f1d74969cc55.setIcon(icon_1751718739db827928f2b18974d13a10);
             
     
-            var marker_21b0b15ac6206397afdad1c1c859a3e6 = L.marker(
-                [37.8893, 128.8038],
+            var marker_b2a7ec97b86e8bf8cca4bc7e90a12d58 = L.marker(
+                [35.0671, 127.7517],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_8ac40895aa6b8f7ca4af822a3326f1ec = L.AwesomeMarkers.icon(
+            var icon_ac8a31dceb8fb1ce326d570753e47158 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#005f33",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_55904e72b7011d212e24fea5e3e1193b = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_d82ec7a072a1b7492f18ba14ecc46381 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_187028e340b8fdc5872a4439580ebe90 = $(`<div id="html_187028e340b8fdc5872a4439580ebe90" style="width: 100.0%; height: 100.0%;">기준항: 강원 강릉시 기준지역: 강원</div>`)[0];
-                popup_55904e72b7011d212e24fea5e3e1193b.setContent(html_187028e340b8fdc5872a4439580ebe90);
+                var html_2ad7f64acbd6a9b24857d353a733b6cb = $(`<div id="html_2ad7f64acbd6a9b24857d353a733b6cb" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경남 하동군</h5><p>✔️기준지역: 통영</p><p>✔️위치정보: 35.0671 / 127.7517</p></div>`)[0];
+                popup_d82ec7a072a1b7492f18ba14ecc46381.setContent(html_2ad7f64acbd6a9b24857d353a733b6cb);
             
         
 
-        marker_21b0b15ac6206397afdad1c1c859a3e6.bindPopup(popup_55904e72b7011d212e24fea5e3e1193b)
+        marker_b2a7ec97b86e8bf8cca4bc7e90a12d58.bindPopup(popup_d82ec7a072a1b7492f18ba14ecc46381)
         ;
 
         
     
     
-            marker_21b0b15ac6206397afdad1c1c859a3e6.bindTooltip(
+            marker_b2a7ec97b86e8bf8cca4bc7e90a12d58.bindTooltip(
                 `<div>
-                     강원 강릉시
+                     <h5>경남 하동군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -879,48 +879,48 @@
             );
         
     
-                marker_21b0b15ac6206397afdad1c1c859a3e6.setIcon(icon_8ac40895aa6b8f7ca4af822a3326f1ec);
+                marker_b2a7ec97b86e8bf8cca4bc7e90a12d58.setIcon(icon_ac8a31dceb8fb1ce326d570753e47158);
             
     
-            var marker_31582ffef7625a0cf596299e6acce0c0 = L.marker(
-                [34.5039, 127.461],
+            var marker_351e06f94ef1ecefe94a760a3ab17358 = L.marker(
+                [35.8059, 129.5017],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_1136e4e927d7011d45683496063c7bec = L.AwesomeMarkers.icon(
+            var icon_762f6d5faf8a47dfb2543993b85c97cc = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#258644",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_85f7f113cdba1042f20cc69f929a7e11 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_a6aaff6f2988c17b63b9d027fc5f9170 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_fd8b213548e32963c1bc19bcfb731643 = $(`<div id="html_fd8b213548e32963c1bc19bcfb731643" style="width: 100.0%; height: 100.0%;">기준항: 전남 고흥군 기준지역: 전남</div>`)[0];
-                popup_85f7f113cdba1042f20cc69f929a7e11.setContent(html_fd8b213548e32963c1bc19bcfb731643);
+                var html_86c1a580fb1ccb6abd2135e75aa1ba2d = $(`<div id="html_86c1a580fb1ccb6abd2135e75aa1ba2d" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경북 경주시</h5><p>✔️기준지역: 울산</p><p>✔️위치정보: 35.8059 / 129.5017</p></div>`)[0];
+                popup_a6aaff6f2988c17b63b9d027fc5f9170.setContent(html_86c1a580fb1ccb6abd2135e75aa1ba2d);
             
         
 
-        marker_31582ffef7625a0cf596299e6acce0c0.bindPopup(popup_85f7f113cdba1042f20cc69f929a7e11)
+        marker_351e06f94ef1ecefe94a760a3ab17358.bindPopup(popup_a6aaff6f2988c17b63b9d027fc5f9170)
         ;
 
         
     
     
-            marker_31582ffef7625a0cf596299e6acce0c0.bindTooltip(
+            marker_351e06f94ef1ecefe94a760a3ab17358.bindTooltip(
                 `<div>
-                     전남 고흥군
+                     <h5>경북 경주시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -928,48 +928,48 @@
             );
         
     
-                marker_31582ffef7625a0cf596299e6acce0c0.setIcon(icon_1136e4e927d7011d45683496063c7bec);
+                marker_351e06f94ef1ecefe94a760a3ab17358.setIcon(icon_762f6d5faf8a47dfb2543993b85c97cc);
             
     
-            var marker_a0e39081a5e75a172046152cc88dfb11 = L.marker(
-                [34.8752, 126.0911],
+            var marker_ca5a7e24d8bd36acfe8159078ce14d3e = L.marker(
+                [36.4007, 129.433],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_834294abb61a7cb97e7e87f62acb3d8f = L.AwesomeMarkers.icon(
+            var icon_4f14a93ea5f7696b217dc5bccb6b2b09 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#005630",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_e171a12699671e63fef5c9ef93557ef5 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_dee98c0874466392a7476283c4037ab4 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_035b58cd7fd632af917449a3850c62f7 = $(`<div id="html_035b58cd7fd632af917449a3850c62f7" style="width: 100.0%; height: 100.0%;">기준항: 전남 신안군 기준지역: 전남</div>`)[0];
-                popup_e171a12699671e63fef5c9ef93557ef5.setContent(html_035b58cd7fd632af917449a3850c62f7);
+                var html_2d939df89add47c7f0549b1825a4cd61 = $(`<div id="html_2d939df89add47c7f0549b1825a4cd61" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경북 영덕군</h5><p>✔️기준지역: 포항 </p><p>✔️위치정보: 36.4007 / 129.433</p></div>`)[0];
+                popup_dee98c0874466392a7476283c4037ab4.setContent(html_2d939df89add47c7f0549b1825a4cd61);
             
         
 
-        marker_a0e39081a5e75a172046152cc88dfb11.bindPopup(popup_e171a12699671e63fef5c9ef93557ef5)
+        marker_ca5a7e24d8bd36acfe8159078ce14d3e.bindPopup(popup_dee98c0874466392a7476283c4037ab4)
         ;
 
         
     
     
-            marker_a0e39081a5e75a172046152cc88dfb11.bindTooltip(
+            marker_ca5a7e24d8bd36acfe8159078ce14d3e.bindTooltip(
                 `<div>
-                     전남 신안군
+                     <h5>경북 영덕군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -977,48 +977,48 @@
             );
         
     
-                marker_a0e39081a5e75a172046152cc88dfb11.setIcon(icon_834294abb61a7cb97e7e87f62acb3d8f);
+                marker_ca5a7e24d8bd36acfe8159078ce14d3e.setIcon(icon_4f14a93ea5f7696b217dc5bccb6b2b09);
             
     
-            var marker_5caa45f0ee0cd612aab312ce277a2a1a = L.marker(
-                [35.1217, 128.5013],
+            var marker_c26ecb18955e6c3b521292cd03065152 = L.marker(
+                [37.4914, 130.8986],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_e7c03756bb463224ded20ca4c56a2e65 = L.AwesomeMarkers.icon(
+            var icon_a87049bb8eb78cc45875f250e89e6631 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#2c904b",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_82d328bc7ac8d8a317edc522caa63910 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_fd48ee45b6c9aadc4e9d02ab0ae08a68 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_98760177de6aa5f778b81787b7c9d65d = $(`<div id="html_98760177de6aa5f778b81787b7c9d65d" style="width: 100.0%; height: 100.0%;">기준항: 경남 창원시 마산합포구 기준지역: 경남</div>`)[0];
-                popup_82d328bc7ac8d8a317edc522caa63910.setContent(html_98760177de6aa5f778b81787b7c9d65d);
+                var html_9227699ec7ab35a9b98d5a89932ee054 = $(`<div id="html_9227699ec7ab35a9b98d5a89932ee054" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경북 울릉군</h5><p>✔️기준지역: 울릉도</p><p>✔️위치정보: 37.4914 / 130.8986</p></div>`)[0];
+                popup_fd48ee45b6c9aadc4e9d02ab0ae08a68.setContent(html_9227699ec7ab35a9b98d5a89932ee054);
             
         
 
-        marker_5caa45f0ee0cd612aab312ce277a2a1a.bindPopup(popup_82d328bc7ac8d8a317edc522caa63910)
+        marker_c26ecb18955e6c3b521292cd03065152.bindPopup(popup_fd48ee45b6c9aadc4e9d02ab0ae08a68)
         ;
 
         
     
     
-            marker_5caa45f0ee0cd612aab312ce277a2a1a.bindTooltip(
+            marker_c26ecb18955e6c3b521292cd03065152.bindTooltip(
                 `<div>
-                     경남 창원시 마산합포구
+                     <h5>경북 울릉군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1026,48 +1026,48 @@
             );
         
     
-                marker_5caa45f0ee0cd612aab312ce277a2a1a.setIcon(icon_e7c03756bb463224ded20ca4c56a2e65);
+                marker_c26ecb18955e6c3b521292cd03065152.setIcon(icon_a87049bb8eb78cc45875f250e89e6631);
             
     
-            var marker_b281f83fb1ed076d9df5ee1a645a5e14 = L.marker(
-                [36.1381, 126.6077],
+            var marker_59d2707b1a41efc54d093b0e38fc03d1 = L.marker(
+                [36.9848, 129.417],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_2ecee26c690d5412ff6b76ed55f40447 = L.AwesomeMarkers.icon(
+            var icon_26f1ecc16dd676408af1c7cda1e15bda = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#1b7e40",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_1472fa29ac99f9548a8e4084f9715f9b = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_d1a0e7a4ff508a65988a7c71da7f043a = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_20975e6b2bc168eeb13594c75feb9a94 = $(`<div id="html_20975e6b2bc168eeb13594c75feb9a94" style="width: 100.0%; height: 100.0%;">기준항: 충남 서천군 기준지역: 충남</div>`)[0];
-                popup_1472fa29ac99f9548a8e4084f9715f9b.setContent(html_20975e6b2bc168eeb13594c75feb9a94);
+                var html_1b1030768fe88c069b7c8d1b939f8d85 = $(`<div id="html_1b1030768fe88c069b7c8d1b939f8d85" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경북 울진군</h5><p>✔️기준지역: 울진</p><p>✔️위치정보: 36.9848 / 129.417</p></div>`)[0];
+                popup_d1a0e7a4ff508a65988a7c71da7f043a.setContent(html_1b1030768fe88c069b7c8d1b939f8d85);
             
         
 
-        marker_b281f83fb1ed076d9df5ee1a645a5e14.bindPopup(popup_1472fa29ac99f9548a8e4084f9715f9b)
+        marker_59d2707b1a41efc54d093b0e38fc03d1.bindPopup(popup_d1a0e7a4ff508a65988a7c71da7f043a)
         ;
 
         
     
     
-            marker_b281f83fb1ed076d9df5ee1a645a5e14.bindTooltip(
+            marker_59d2707b1a41efc54d093b0e38fc03d1.bindTooltip(
                 `<div>
-                     충남 서천군
+                     <h5>경북 울진군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1075,48 +1075,48 @@
             );
         
     
-                marker_b281f83fb1ed076d9df5ee1a645a5e14.setIcon(icon_2ecee26c690d5412ff6b76ed55f40447);
+                marker_59d2707b1a41efc54d093b0e38fc03d1.setIcon(icon_26f1ecc16dd676408af1c7cda1e15bda);
             
     
-            var marker_181aab8469b5f081a11cf01e51c8892b = L.marker(
-                [34.323, 126.7258],
+            var marker_bd5a3fc572d1cee1c53fff1c8df5592e = L.marker(
+                [35.9893, 129.5544],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_e812d6cd285c709d64871e2ef6f20d37 = L.AwesomeMarkers.icon(
+            var icon_c144d83c1446e0a470ba589cf710f02d = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#005630",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_e566dce94720a4d19b2f7f55071312e3 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_76b28c3b7b969b8591bf9d212502e435 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_e38a89aa7809112e71d95f2b9142abd4 = $(`<div id="html_e38a89aa7809112e71d95f2b9142abd4" style="width: 100.0%; height: 100.0%;">기준항: 전남 완도군 기준지역: 전남</div>`)[0];
-                popup_e566dce94720a4d19b2f7f55071312e3.setContent(html_e38a89aa7809112e71d95f2b9142abd4);
+                var html_71a1d080953be056c88d029ac92990c9 = $(`<div id="html_71a1d080953be056c88d029ac92990c9" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 경북 포항시</h5><p>✔️기준지역: 포항 </p><p>✔️위치정보: 35.9893 / 129.5544</p></div>`)[0];
+                popup_76b28c3b7b969b8591bf9d212502e435.setContent(html_71a1d080953be056c88d029ac92990c9);
             
         
 
-        marker_181aab8469b5f081a11cf01e51c8892b.bindPopup(popup_e566dce94720a4d19b2f7f55071312e3)
+        marker_bd5a3fc572d1cee1c53fff1c8df5592e.bindPopup(popup_76b28c3b7b969b8591bf9d212502e435)
         ;
 
         
     
     
-            marker_181aab8469b5f081a11cf01e51c8892b.bindTooltip(
+            marker_bd5a3fc572d1cee1c53fff1c8df5592e.bindTooltip(
                 `<div>
-                     전남 완도군
+                     <h5>경북 포항시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1124,48 +1124,48 @@
             );
         
     
-                marker_181aab8469b5f081a11cf01e51c8892b.setIcon(icon_e812d6cd285c709d64871e2ef6f20d37);
+                marker_bd5a3fc572d1cee1c53fff1c8df5592e.setIcon(icon_c144d83c1446e0a470ba589cf710f02d);
             
     
-            var marker_7b2d8e461754205997173f2224614b6c = L.marker(
-                [34.6049, 127.6114],
+            var marker_046c6bd5cf21662a422f4dd330d306c8 = L.marker(
+                [35.1065, 129.0241],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_eef46f0aba46f1f314c7863ff8db63b8 = L.AwesomeMarkers.icon(
+            var icon_072099d79cb1308b55ed90837aaa7d61 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#fafdce",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_532d2645cacc48a98aafcb877e08b6f9 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_19678cb83572afefc4123601adba1130 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_8b2e72d06691bf95788b3ae38660116f = $(`<div id="html_8b2e72d06691bf95788b3ae38660116f" style="width: 100.0%; height: 100.0%;">기준항: 전남 여수시 기준지역: 전남</div>`)[0];
-                popup_532d2645cacc48a98aafcb877e08b6f9.setContent(html_8b2e72d06691bf95788b3ae38660116f);
+                var html_ae7acd481c357c7ccaca165128350d47 = $(`<div id="html_ae7acd481c357c7ccaca165128350d47" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 부산광역시</h5><p>✔️기준지역: 거제도</p><p>✔️위치정보: 35.1065 / 129.0241</p></div>`)[0];
+                popup_19678cb83572afefc4123601adba1130.setContent(html_ae7acd481c357c7ccaca165128350d47);
             
         
 
-        marker_7b2d8e461754205997173f2224614b6c.bindPopup(popup_532d2645cacc48a98aafcb877e08b6f9)
+        marker_046c6bd5cf21662a422f4dd330d306c8.bindPopup(popup_19678cb83572afefc4123601adba1130)
         ;
 
         
     
     
-            marker_7b2d8e461754205997173f2224614b6c.bindTooltip(
+            marker_046c6bd5cf21662a422f4dd330d306c8.bindTooltip(
                 `<div>
-                     전남 여수시
+                     <h5>부산광역시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1173,48 +1173,48 @@
             );
         
     
-                marker_7b2d8e461754205997173f2224614b6c.setIcon(icon_eef46f0aba46f1f314c7863ff8db63b8);
+                marker_046c6bd5cf21662a422f4dd330d306c8.setIcon(icon_072099d79cb1308b55ed90837aaa7d61);
             
     
-            var marker_74e703fe763b59a41ee0607eefc750f5 = L.marker(
-                [36.7195, 126.2137],
+            var marker_ab4263d8f63dc27e54ecbe360bcf79f7 = L.marker(
+                [33.2528, 126.561],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_002f20b0d8e69f8e97f320584ba5a3a3 = L.AwesomeMarkers.icon(
+            var icon_92cd7804a516eb92578b2de4f571249c = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#7fc97b",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_e3c74c372568c9b216e4faad984ddb1f = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_731bf42b3f36f27949ea0513e1f50da8 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_effae4e3df5498664918e3f989b6253d = $(`<div id="html_effae4e3df5498664918e3f989b6253d" style="width: 100.0%; height: 100.0%;">기준항: 충남 태안군 기준지역: 충남</div>`)[0];
-                popup_e3c74c372568c9b216e4faad984ddb1f.setContent(html_effae4e3df5498664918e3f989b6253d);
+                var html_656fbfe1e14f7571888cd5ab9f5bb069 = $(`<div id="html_656fbfe1e14f7571888cd5ab9f5bb069" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 서귀포시</h5><p>✔️기준지역: 서귀포</p><p>✔️위치정보: 33.2528 / 126.561</p></div>`)[0];
+                popup_731bf42b3f36f27949ea0513e1f50da8.setContent(html_656fbfe1e14f7571888cd5ab9f5bb069);
             
         
 
-        marker_74e703fe763b59a41ee0607eefc750f5.bindPopup(popup_e3c74c372568c9b216e4faad984ddb1f)
+        marker_ab4263d8f63dc27e54ecbe360bcf79f7.bindPopup(popup_731bf42b3f36f27949ea0513e1f50da8)
         ;
 
         
     
     
-            marker_74e703fe763b59a41ee0607eefc750f5.bindTooltip(
+            marker_ab4263d8f63dc27e54ecbe360bcf79f7.bindTooltip(
                 `<div>
-                     충남 태안군
+                     <h5>서귀포시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1222,48 +1222,48 @@
             );
         
     
-                marker_74e703fe763b59a41ee0607eefc750f5.setIcon(icon_002f20b0d8e69f8e97f320584ba5a3a3);
+                marker_ab4263d8f63dc27e54ecbe360bcf79f7.setIcon(icon_92cd7804a516eb92578b2de4f571249c);
             
     
-            var marker_303fd4e4f25bf921353f30c884f2f15c = L.marker(
-                [37.164, 126.6914],
+            var marker_64c4145b2198df81e8abaa3536506953 = L.marker(
+                [35.5826, 129.3604],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_65c5bf11abad07d9e6ec7237a4f64212 = L.AwesomeMarkers.icon(
+            var icon_f5cb13480e9dcab692b37ee8edd47a2c = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#258644",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_a3dc269ebc58fc54301c8090d7967c8d = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_927fca597e5a7cc88eb51e963171e9e5 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_cc1f5ff525ac4a52fdfef33654a202f4 = $(`<div id="html_cc1f5ff525ac4a52fdfef33654a202f4" style="width: 100.0%; height: 100.0%;">기준항: 경기 화성시 기준지역: 경기</div>`)[0];
-                popup_a3dc269ebc58fc54301c8090d7967c8d.setContent(html_cc1f5ff525ac4a52fdfef33654a202f4);
+                var html_26bd8cf82f38f6669fc7023452ac9944 = $(`<div id="html_26bd8cf82f38f6669fc7023452ac9944" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 울산광역시</h5><p>✔️기준지역: 울산</p><p>✔️위치정보: 35.5826 / 129.3604</p></div>`)[0];
+                popup_927fca597e5a7cc88eb51e963171e9e5.setContent(html_26bd8cf82f38f6669fc7023452ac9944);
             
         
 
-        marker_303fd4e4f25bf921353f30c884f2f15c.bindPopup(popup_a3dc269ebc58fc54301c8090d7967c8d)
+        marker_64c4145b2198df81e8abaa3536506953.bindPopup(popup_927fca597e5a7cc88eb51e963171e9e5)
         ;
 
         
     
     
-            marker_303fd4e4f25bf921353f30c884f2f15c.bindTooltip(
+            marker_64c4145b2198df81e8abaa3536506953.bindTooltip(
                 `<div>
-                     경기 화성시
+                     <h5>울산광역시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1271,48 +1271,48 @@
             );
         
     
-                marker_303fd4e4f25bf921353f30c884f2f15c.setIcon(icon_65c5bf11abad07d9e6ec7237a4f64212);
+                marker_64c4145b2198df81e8abaa3536506953.setIcon(icon_f5cb13480e9dcab692b37ee8edd47a2c);
             
     
-            var marker_e23a3452779bc9c214ea21de5c77740b = L.marker(
-                [34.4648, 126.8266],
+            var marker_6fdc3a7eeea4fe73b1ef6f6da677c173 = L.marker(
+                [37.4735, 126.6214],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_e54f536a2dae548dfad60cb7b5cac226 = L.AwesomeMarkers.icon(
+            var icon_a509233c3655e33c7870839df7363568 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#d5eea1",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_327e646005f26d2ca08b87bf131d978d = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_e7725a78ea4447ba2c82ae7d242f0cc9 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_156f6a5363da560387122e2f1960798d = $(`<div id="html_156f6a5363da560387122e2f1960798d" style="width: 100.0%; height: 100.0%;">기준항: 전남 강진군 기준지역: 전남</div>`)[0];
-                popup_327e646005f26d2ca08b87bf131d978d.setContent(html_156f6a5363da560387122e2f1960798d);
+                var html_1f6ec0864f69405d32ec69d3ae603827 = $(`<div id="html_1f6ec0864f69405d32ec69d3ae603827" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 인천광역시</h5><p>✔️기준지역: 덕적도</p><p>✔️위치정보: 37.4735 / 126.6214</p></div>`)[0];
+                popup_e7725a78ea4447ba2c82ae7d242f0cc9.setContent(html_1f6ec0864f69405d32ec69d3ae603827);
             
         
 
-        marker_e23a3452779bc9c214ea21de5c77740b.bindPopup(popup_327e646005f26d2ca08b87bf131d978d)
+        marker_6fdc3a7eeea4fe73b1ef6f6da677c173.bindPopup(popup_e7725a78ea4447ba2c82ae7d242f0cc9)
         ;
 
         
     
     
-            marker_e23a3452779bc9c214ea21de5c77740b.bindTooltip(
+            marker_6fdc3a7eeea4fe73b1ef6f6da677c173.bindTooltip(
                 `<div>
-                     전남 강진군
+                     <h5>인천광역시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1320,48 +1320,48 @@
             );
         
     
-                marker_e23a3452779bc9c214ea21de5c77740b.setIcon(icon_e54f536a2dae548dfad60cb7b5cac226);
+                marker_6fdc3a7eeea4fe73b1ef6f6da677c173.setIcon(icon_a509233c3655e33c7870839df7363568);
             
     
-            var marker_cb220a2ec8a8a7b8e949d1fc05fd9ab6 = L.marker(
-                [35.8858, 126.42],
+            var marker_d7e7bf7b18e810430272799dfa6008a0 = L.marker(
+                [34.4707, 126.8278],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_3662cdc5f5ec9f4c85b3001869a064cc = L.AwesomeMarkers.icon(
+            var icon_fa9789badb68916f40fe695cfaf6bf35 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_8d2ca237810dd83755c5dcc2d82ae7d2 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_6bbf41b5aeb6d7814975b841684b2f36 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_bae3862965c70915e5d89b1caf1eb0ae = $(`<div id="html_bae3862965c70915e5d89b1caf1eb0ae" style="width: 100.0%; height: 100.0%;">기준항: 전북 군산시 기준지역: 전북</div>`)[0];
-                popup_8d2ca237810dd83755c5dcc2d82ae7d2.setContent(html_bae3862965c70915e5d89b1caf1eb0ae);
+                var html_a68eaa1b3242f35f061293f485701900 = $(`<div id="html_a68eaa1b3242f35f061293f485701900" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 강진군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.4707 / 126.8278</p></div>`)[0];
+                popup_6bbf41b5aeb6d7814975b841684b2f36.setContent(html_a68eaa1b3242f35f061293f485701900);
             
         
 
-        marker_cb220a2ec8a8a7b8e949d1fc05fd9ab6.bindPopup(popup_8d2ca237810dd83755c5dcc2d82ae7d2)
+        marker_d7e7bf7b18e810430272799dfa6008a0.bindPopup(popup_6bbf41b5aeb6d7814975b841684b2f36)
         ;
 
         
     
     
-            marker_cb220a2ec8a8a7b8e949d1fc05fd9ab6.bindTooltip(
+            marker_d7e7bf7b18e810430272799dfa6008a0.bindTooltip(
                 `<div>
-                     전북 군산시
+                     <h5>전남 강진군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1369,48 +1369,48 @@
             );
         
     
-                marker_cb220a2ec8a8a7b8e949d1fc05fd9ab6.setIcon(icon_3662cdc5f5ec9f4c85b3001869a064cc);
+                marker_d7e7bf7b18e810430272799dfa6008a0.setIcon(icon_fa9789badb68916f40fe695cfaf6bf35);
             
     
-            var marker_7ca1b754265e376c7faf5c2276ddcbba = L.marker(
-                [34.9342, 128.1945],
+            var marker_3e3dbaad2f12419e852ee1f9a0ddcafd = L.marker(
+                [34.5208, 127.4282],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_3b7ec3c7f8f66802561d16a81ba30937 = L.AwesomeMarkers.icon(
+            var icon_405cf5a270bf4896b50724b13666ffbe = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#fcfed9",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_38006043b3889770152d8bf6fb206838 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_97b5b9535875443ae4326c227907b553 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_7a5c9a97172a3d566053b195dd0d5d04 = $(`<div id="html_7a5c9a97172a3d566053b195dd0d5d04" style="width: 100.0%; height: 100.0%;">기준항: 경남 고성군 기준지역: 경남</div>`)[0];
-                popup_38006043b3889770152d8bf6fb206838.setContent(html_7a5c9a97172a3d566053b195dd0d5d04);
+                var html_7e96b0e37938e3de4b06912406f9e38d = $(`<div id="html_7e96b0e37938e3de4b06912406f9e38d" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 고흥군</h5><p>✔️기준지역: 거문도</p><p>✔️위치정보: 34.5208 / 127.4282</p></div>`)[0];
+                popup_97b5b9535875443ae4326c227907b553.setContent(html_7e96b0e37938e3de4b06912406f9e38d);
             
         
 
-        marker_7ca1b754265e376c7faf5c2276ddcbba.bindPopup(popup_38006043b3889770152d8bf6fb206838)
+        marker_3e3dbaad2f12419e852ee1f9a0ddcafd.bindPopup(popup_97b5b9535875443ae4326c227907b553)
         ;
 
         
     
     
-            marker_7ca1b754265e376c7faf5c2276ddcbba.bindTooltip(
+            marker_3e3dbaad2f12419e852ee1f9a0ddcafd.bindTooltip(
                 `<div>
-                     경남 고성군
+                     <h5>전남 고흥군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1418,48 +1418,48 @@
             );
         
     
-                marker_7ca1b754265e376c7faf5c2276ddcbba.setIcon(icon_3b7ec3c7f8f66802561d16a81ba30937);
+                marker_3e3dbaad2f12419e852ee1f9a0ddcafd.setIcon(icon_405cf5a270bf4896b50724b13666ffbe);
             
     
-            var marker_3a2dce8c9b57488bfd4ce22f19ae38a2 = L.marker(
-                [35.6011, 126.3916],
+            var marker_dfa48a3a4582c8743de5a589cccb307a = L.marker(
+                [34.7903, 126.3848],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_df1f1ba56c57d22ad2bbbdb59f8c44f5 = L.AwesomeMarkers.icon(
+            var icon_d5eee43f2496bf4519c3d32e327eb009 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_37a40ee316605717c2e8418aa754fe8a = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_6bc00a0b24e77c2c5543e0d1eab8e1b2 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_c0312fcda7db7a59c1229bd0e997c39b = $(`<div id="html_c0312fcda7db7a59c1229bd0e997c39b" style="width: 100.0%; height: 100.0%;">기준항: 전북 부안군 기준지역: 전북</div>`)[0];
-                popup_37a40ee316605717c2e8418aa754fe8a.setContent(html_c0312fcda7db7a59c1229bd0e997c39b);
+                var html_e30676161070dad1e3d8094457436230 = $(`<div id="html_e30676161070dad1e3d8094457436230" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 목포시</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.7903 / 126.3848</p></div>`)[0];
+                popup_6bc00a0b24e77c2c5543e0d1eab8e1b2.setContent(html_e30676161070dad1e3d8094457436230);
             
         
 
-        marker_3a2dce8c9b57488bfd4ce22f19ae38a2.bindPopup(popup_37a40ee316605717c2e8418aa754fe8a)
+        marker_dfa48a3a4582c8743de5a589cccb307a.bindPopup(popup_6bc00a0b24e77c2c5543e0d1eab8e1b2)
         ;
 
         
     
     
-            marker_3a2dce8c9b57488bfd4ce22f19ae38a2.bindTooltip(
+            marker_dfa48a3a4582c8743de5a589cccb307a.bindTooltip(
                 `<div>
-                     전북 부안군
+                     <h5>전남 목포시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1467,48 +1467,48 @@
             );
         
     
-                marker_3a2dce8c9b57488bfd4ce22f19ae38a2.setIcon(icon_df1f1ba56c57d22ad2bbbdb59f8c44f5);
+                marker_dfa48a3a4582c8743de5a589cccb307a.setIcon(icon_d5eee43f2496bf4519c3d32e327eb009);
             
     
-            var marker_86933fd3c5d5f3bf07f197748576485d = L.marker(
-                [37.4836, 130.9222],
+            var marker_97dbdceedaa6536d7c91eb7a8e5c6d24 = L.marker(
+                [34.9519, 126.3403],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_87cef2258ba4bd685a0b0baa3aa2a409 = L.AwesomeMarkers.icon(
+            var icon_fb4367e9f0af225f18059e166a786ae7 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_6dbe004a2659860e50ceab1d012a5d48 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_058167778654c0658653d1518de80d01 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_32781e509d0d78cdb0f790aa35e533c5 = $(`<div id="html_32781e509d0d78cdb0f790aa35e533c5" style="width: 100.0%; height: 100.0%;">기준항: 경북 울릉군 기준지역: 경북</div>`)[0];
-                popup_6dbe004a2659860e50ceab1d012a5d48.setContent(html_32781e509d0d78cdb0f790aa35e533c5);
+                var html_06283d945639c163ec34342056ce51c5 = $(`<div id="html_06283d945639c163ec34342056ce51c5" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 무안군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.9519 / 126.3403</p></div>`)[0];
+                popup_058167778654c0658653d1518de80d01.setContent(html_06283d945639c163ec34342056ce51c5);
             
         
 
-        marker_86933fd3c5d5f3bf07f197748576485d.bindPopup(popup_6dbe004a2659860e50ceab1d012a5d48)
+        marker_97dbdceedaa6536d7c91eb7a8e5c6d24.bindPopup(popup_058167778654c0658653d1518de80d01)
         ;
 
         
     
     
-            marker_86933fd3c5d5f3bf07f197748576485d.bindTooltip(
+            marker_97dbdceedaa6536d7c91eb7a8e5c6d24.bindTooltip(
                 `<div>
-                     경북 울릉군
+                     <h5>전남 무안군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1516,48 +1516,48 @@
             );
         
     
-                marker_86933fd3c5d5f3bf07f197748576485d.setIcon(icon_87cef2258ba4bd685a0b0baa3aa2a409);
+                marker_97dbdceedaa6536d7c91eb7a8e5c6d24.setIcon(icon_fb4367e9f0af225f18059e166a786ae7);
             
     
-            var marker_f35b0b9e85e2856995c102c849ab7864 = L.marker(
-                [36.3903, 126.4535],
+            var marker_0e25a9991d7cecd3b630e68da6408305 = L.marker(
+                [34.6886, 127.0955],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_031bd9dcf9ca26633b966f6dce97d3ac = L.AwesomeMarkers.icon(
+            var icon_e2d08811c68c16eb2f0a11e052e15b59 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_0dabb2ae7efe676d18f76388702c7b7b = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_d2892e9761bf193ea3b08e3342540598 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_94ac87a644d376bbabe86a097df85961 = $(`<div id="html_94ac87a644d376bbabe86a097df85961" style="width: 100.0%; height: 100.0%;">기준항: 충남 보령시 기준지역: 충남</div>`)[0];
-                popup_0dabb2ae7efe676d18f76388702c7b7b.setContent(html_94ac87a644d376bbabe86a097df85961);
+                var html_ec1fa921ee9c24fb334bde7943e93327 = $(`<div id="html_ec1fa921ee9c24fb334bde7943e93327" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 보성군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.6886 / 127.0955</p></div>`)[0];
+                popup_d2892e9761bf193ea3b08e3342540598.setContent(html_ec1fa921ee9c24fb334bde7943e93327);
             
         
 
-        marker_f35b0b9e85e2856995c102c849ab7864.bindPopup(popup_0dabb2ae7efe676d18f76388702c7b7b)
+        marker_0e25a9991d7cecd3b630e68da6408305.bindPopup(popup_d2892e9761bf193ea3b08e3342540598)
         ;
 
         
     
     
-            marker_f35b0b9e85e2856995c102c849ab7864.bindTooltip(
+            marker_0e25a9991d7cecd3b630e68da6408305.bindTooltip(
                 `<div>
-                     충남 보령시
+                     <h5>전남 보성군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1565,48 +1565,48 @@
             );
         
     
-                marker_f35b0b9e85e2856995c102c849ab7864.setIcon(icon_031bd9dcf9ca26633b966f6dce97d3ac);
+                marker_0e25a9991d7cecd3b630e68da6408305.setIcon(icon_e2d08811c68c16eb2f0a11e052e15b59);
             
     
-            var marker_c5f33efeb8ee358d34f8954393d63484 = L.marker(
-                [35.4268, 129.3258],
+            var marker_71a660357fd1045fc3cb79a92a64b869 = L.marker(
+                [34.9505, 127.4873],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_ed06a17e706b07c1659e781f43ae300d = L.AwesomeMarkers.icon(
+            var icon_ed5046f844f05ebefbfb930ea47d57d8 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#005f33",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_f58f579231b2f2fb1864948eb2ad3394 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_c76a5ff1080978941404f567f7bb2322 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_d5eabcc387b1ceb29a472cb2c64e2a82 = $(`<div id="html_d5eabcc387b1ceb29a472cb2c64e2a82" style="width: 100.0%; height: 100.0%;">기준항: 울산시 울주군 기준지역: 울산시</div>`)[0];
-                popup_f58f579231b2f2fb1864948eb2ad3394.setContent(html_d5eabcc387b1ceb29a472cb2c64e2a82);
+                var html_2a9a7c2b12f0c7620339b7903a1958f9 = $(`<div id="html_2a9a7c2b12f0c7620339b7903a1958f9" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 순천시</h5><p>✔️기준지역: 통영</p><p>✔️위치정보: 34.9505 / 127.4873</p></div>`)[0];
+                popup_c76a5ff1080978941404f567f7bb2322.setContent(html_2a9a7c2b12f0c7620339b7903a1958f9);
             
         
 
-        marker_c5f33efeb8ee358d34f8954393d63484.bindPopup(popup_f58f579231b2f2fb1864948eb2ad3394)
+        marker_71a660357fd1045fc3cb79a92a64b869.bindPopup(popup_c76a5ff1080978941404f567f7bb2322)
         ;
 
         
     
     
-            marker_c5f33efeb8ee358d34f8954393d63484.bindTooltip(
+            marker_71a660357fd1045fc3cb79a92a64b869.bindTooltip(
                 `<div>
-                     울산시 울주군
+                     <h5>전남 순천시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1614,48 +1614,48 @@
             );
         
     
-                marker_c5f33efeb8ee358d34f8954393d63484.setIcon(icon_ed06a17e706b07c1659e781f43ae300d);
+                marker_71a660357fd1045fc3cb79a92a64b869.setIcon(icon_ed5046f844f05ebefbfb930ea47d57d8);
             
     
-            var marker_03c826898aa6e289d4146ed83f2ffcf4 = L.marker(
-                [34.3992, 126.2071],
+            var marker_9cb5449d133df588eb9ec595e2408c4a = L.marker(
+                [34.8454, 126.1118],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_8fad2fe911ca98ffdc59b81a0d534c83 = L.AwesomeMarkers.icon(
+            var icon_40929be9fa8a2ef9d2e69ed31a1f722e = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_dfad10512b4719bc48481377fa612b70 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_fff1ca06ce84855b1ac81071319979a3 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_64f88415b52e87f4d4827951b8b01ed6 = $(`<div id="html_64f88415b52e87f4d4827951b8b01ed6" style="width: 100.0%; height: 100.0%;">기준항: 전남 진도군 기준지역: 전남</div>`)[0];
-                popup_dfad10512b4719bc48481377fa612b70.setContent(html_64f88415b52e87f4d4827951b8b01ed6);
+                var html_22108d64ce153ea628e92ced78396766 = $(`<div id="html_22108d64ce153ea628e92ced78396766" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 신안군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.8454 / 126.1118</p></div>`)[0];
+                popup_fff1ca06ce84855b1ac81071319979a3.setContent(html_22108d64ce153ea628e92ced78396766);
             
         
 
-        marker_03c826898aa6e289d4146ed83f2ffcf4.bindPopup(popup_dfad10512b4719bc48481377fa612b70)
+        marker_9cb5449d133df588eb9ec595e2408c4a.bindPopup(popup_fff1ca06ce84855b1ac81071319979a3)
         ;
 
         
     
     
-            marker_03c826898aa6e289d4146ed83f2ffcf4.bindTooltip(
+            marker_9cb5449d133df588eb9ec595e2408c4a.bindTooltip(
                 `<div>
-                     전남 진도군
+                     <h5>전남 신안군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1663,48 +1663,48 @@
             );
         
     
-                marker_03c826898aa6e289d4146ed83f2ffcf4.setIcon(icon_8fad2fe911ca98ffdc59b81a0d534c83);
+                marker_9cb5449d133df588eb9ec595e2408c4a.setIcon(icon_40929be9fa8a2ef9d2e69ed31a1f722e);
             
     
-            var marker_08aee2bab5a2a33ac07709f1eb11c6fa = L.marker(
-                [34.478, 126.9423],
+            var marker_044c6ba6a8c1b9ea99a9adc4dcdaa22c = L.marker(
+                [34.7546, 127.6599],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_a4b13e0344d4e568ef0775bce75f617d = L.AwesomeMarkers.icon(
+            var icon_6bba8ea71eaa55429d6eef0f220f0ce5 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#005f33",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_9058042a3dfb22a923ba1a87d6fa00de = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_9e82e0f26f3ec0b82e621208eac4ebfc = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_9c689aa3b30d6a028a5f331485f36b27 = $(`<div id="html_9c689aa3b30d6a028a5f331485f36b27" style="width: 100.0%; height: 100.0%;">기준항: 전남 장흥군 기준지역: 전남</div>`)[0];
-                popup_9058042a3dfb22a923ba1a87d6fa00de.setContent(html_9c689aa3b30d6a028a5f331485f36b27);
+                var html_96fd388ec0c1f4786dec7d16c47698e5 = $(`<div id="html_96fd388ec0c1f4786dec7d16c47698e5" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 여수시</h5><p>✔️기준지역: 통영</p><p>✔️위치정보: 34.7546 / 127.6599</p></div>`)[0];
+                popup_9e82e0f26f3ec0b82e621208eac4ebfc.setContent(html_96fd388ec0c1f4786dec7d16c47698e5);
             
         
 
-        marker_08aee2bab5a2a33ac07709f1eb11c6fa.bindPopup(popup_9058042a3dfb22a923ba1a87d6fa00de)
+        marker_044c6ba6a8c1b9ea99a9adc4dcdaa22c.bindPopup(popup_9e82e0f26f3ec0b82e621208eac4ebfc)
         ;
 
         
     
     
-            marker_08aee2bab5a2a33ac07709f1eb11c6fa.bindTooltip(
+            marker_044c6ba6a8c1b9ea99a9adc4dcdaa22c.bindTooltip(
                 `<div>
-                     전남 장흥군
+                     <h5>전남 여수시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1712,48 +1712,48 @@
             );
         
     
-                marker_08aee2bab5a2a33ac07709f1eb11c6fa.setIcon(icon_a4b13e0344d4e568ef0775bce75f617d);
+                marker_044c6ba6a8c1b9ea99a9adc4dcdaa22c.setIcon(icon_6bba8ea71eaa55429d6eef0f220f0ce5);
             
     
-            var marker_80b64675926aa9d08bae6ba194bca448 = L.marker(
-                [34.3743, 126.5276],
+            var marker_d83356fd67451c311c5fc6b2005ac9b9 = L.marker(
+                [35.3545, 126.4682],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_988e8f85f568ef46caa2d7c6d8f70a20 = L.AwesomeMarkers.icon(
+            var icon_307055310ffb2e346043504f1548aac6 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#9ad486",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_0be5379d7203c413211290e067fb9a96 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_ca35d071619a20c09e9e21b2e57c2b8f = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_9e3bbb46d8fd29962555e0e237860d5f = $(`<div id="html_9e3bbb46d8fd29962555e0e237860d5f" style="width: 100.0%; height: 100.0%;">기준항: 전남 해남군 기준지역: 전남</div>`)[0];
-                popup_0be5379d7203c413211290e067fb9a96.setContent(html_9e3bbb46d8fd29962555e0e237860d5f);
+                var html_3a78d877552b0b1b933319e16595d641 = $(`<div id="html_3a78d877552b0b1b933319e16595d641" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 영광군</h5><p>✔️기준지역: 부안</p><p>✔️위치정보: 35.3545 / 126.4682</p></div>`)[0];
+                popup_ca35d071619a20c09e9e21b2e57c2b8f.setContent(html_3a78d877552b0b1b933319e16595d641);
             
         
 
-        marker_80b64675926aa9d08bae6ba194bca448.bindPopup(popup_0be5379d7203c413211290e067fb9a96)
+        marker_d83356fd67451c311c5fc6b2005ac9b9.bindPopup(popup_ca35d071619a20c09e9e21b2e57c2b8f)
         ;
 
         
     
     
-            marker_80b64675926aa9d08bae6ba194bca448.bindTooltip(
+            marker_d83356fd67451c311c5fc6b2005ac9b9.bindTooltip(
                 `<div>
-                     전남 해남군
+                     <h5>전남 영광군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1761,48 +1761,48 @@
             );
         
     
-                marker_80b64675926aa9d08bae6ba194bca448.setIcon(icon_988e8f85f568ef46caa2d7c6d8f70a20);
+                marker_d83356fd67451c311c5fc6b2005ac9b9.setIcon(icon_307055310ffb2e346043504f1548aac6);
             
     
-            var marker_c771f4a431261bfaf8f8c535c500f3f9 = L.marker(
-                [35.5179, 126.5447],
+            var marker_6ea8897c1299092a15a604a6a88e0efb = L.marker(
+                [34.7458, 126.4694],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_2e78368ec76377b38c4bd1d657d86d11 = L.AwesomeMarkers.icon(
+            var icon_3e97078e4eedddb3d65b992e58a828fd = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_9b00c9586891b9d8a2286fce606dfb48 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_d19dc02db8801e47771ed2b4d8bc92bd = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_f0c243b3c2033849f1d3b01560b4ecee = $(`<div id="html_f0c243b3c2033849f1d3b01560b4ecee" style="width: 100.0%; height: 100.0%;">기준항: 전북 고창군 기준지역: 전북</div>`)[0];
-                popup_9b00c9586891b9d8a2286fce606dfb48.setContent(html_f0c243b3c2033849f1d3b01560b4ecee);
+                var html_a9b34960f57430927919e9ed77cc5e99 = $(`<div id="html_a9b34960f57430927919e9ed77cc5e99" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 영암군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.7458 / 126.4694</p></div>`)[0];
+                popup_d19dc02db8801e47771ed2b4d8bc92bd.setContent(html_a9b34960f57430927919e9ed77cc5e99);
             
         
 
-        marker_c771f4a431261bfaf8f8c535c500f3f9.bindPopup(popup_9b00c9586891b9d8a2286fce606dfb48)
+        marker_6ea8897c1299092a15a604a6a88e0efb.bindPopup(popup_d19dc02db8801e47771ed2b4d8bc92bd)
         ;
 
         
     
     
-            marker_c771f4a431261bfaf8f8c535c500f3f9.bindTooltip(
+            marker_6ea8897c1299092a15a604a6a88e0efb.bindTooltip(
                 `<div>
-                     전북 고창군
+                     <h5>전남 영암군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1810,48 +1810,48 @@
             );
         
     
-                marker_c771f4a431261bfaf8f8c535c500f3f9.setIcon(icon_2e78368ec76377b38c4bd1d657d86d11);
+                marker_6ea8897c1299092a15a604a6a88e0efb.setIcon(icon_3e97078e4eedddb3d65b992e58a828fd);
             
     
-            var marker_b63fd38c39e2fb7463990dd5e9d6ab84 = L.marker(
-                [34.689, 127.0939],
+            var marker_bbcaebf16d0327000f1c017ddaf9cc31 = L.marker(
+                [34.3256, 126.7152],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_a997ffad20d112fc826c0faf37a78143 = L.AwesomeMarkers.icon(
+            var icon_dc14338d95fa33d216bea89e4f09a4d4 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_24ecffc40e81f1cec4f22e8f57cc78fc = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_c19a101bfcd55e11cf93b9bacbf5e661 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_5d1d04bf539b3324aba7ed6c3734cae0 = $(`<div id="html_5d1d04bf539b3324aba7ed6c3734cae0" style="width: 100.0%; height: 100.0%;">기준항: 전남 보성군 기준지역: 전남</div>`)[0];
-                popup_24ecffc40e81f1cec4f22e8f57cc78fc.setContent(html_5d1d04bf539b3324aba7ed6c3734cae0);
+                var html_6fcc67bf7f1f7d5a39f9911a0836cd0e = $(`<div id="html_6fcc67bf7f1f7d5a39f9911a0836cd0e" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 완도군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.3256 / 126.7152</p></div>`)[0];
+                popup_c19a101bfcd55e11cf93b9bacbf5e661.setContent(html_6fcc67bf7f1f7d5a39f9911a0836cd0e);
             
         
 
-        marker_b63fd38c39e2fb7463990dd5e9d6ab84.bindPopup(popup_24ecffc40e81f1cec4f22e8f57cc78fc)
+        marker_bbcaebf16d0327000f1c017ddaf9cc31.bindPopup(popup_c19a101bfcd55e11cf93b9bacbf5e661)
         ;
 
         
     
     
-            marker_b63fd38c39e2fb7463990dd5e9d6ab84.bindTooltip(
+            marker_bbcaebf16d0327000f1c017ddaf9cc31.bindTooltip(
                 `<div>
-                     전남 보성군
+                     <h5>전남 완도군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1859,48 +1859,48 @@
             );
         
     
-                marker_b63fd38c39e2fb7463990dd5e9d6ab84.setIcon(icon_a997ffad20d112fc826c0faf37a78143);
+                marker_bbcaebf16d0327000f1c017ddaf9cc31.setIcon(icon_dc14338d95fa33d216bea89e4f09a4d4);
             
     
-            var marker_52fd60afe4557474a7cdf77ccd2097a1 = L.marker(
-                [36.8787, 126.4282],
+            var marker_c9d47948db13feddc64d11fcff5a5424 = L.marker(
+                [34.4815, 126.9471],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_96fc8ee768a7ca603f99ff365d32b0aa = L.AwesomeMarkers.icon(
+            var icon_460ab84f8ecd1467f33da3b1187070df = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_c26db5156d0af2d1a01d20d78c792466 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_1c41c4c37c9eb6a5bd65f58116f55da7 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_62c9ff0997bd64c6d758e2b79ea20445 = $(`<div id="html_62c9ff0997bd64c6d758e2b79ea20445" style="width: 100.0%; height: 100.0%;">기준항: 충남 서산시 기준지역: 충남</div>`)[0];
-                popup_c26db5156d0af2d1a01d20d78c792466.setContent(html_62c9ff0997bd64c6d758e2b79ea20445);
+                var html_c8063a8f4a1ed9fe1fab72196b7f5073 = $(`<div id="html_c8063a8f4a1ed9fe1fab72196b7f5073" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 장흥군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.4815 / 126.9471</p></div>`)[0];
+                popup_1c41c4c37c9eb6a5bd65f58116f55da7.setContent(html_c8063a8f4a1ed9fe1fab72196b7f5073);
             
         
 
-        marker_52fd60afe4557474a7cdf77ccd2097a1.bindPopup(popup_c26db5156d0af2d1a01d20d78c792466)
+        marker_c9d47948db13feddc64d11fcff5a5424.bindPopup(popup_1c41c4c37c9eb6a5bd65f58116f55da7)
         ;
 
         
     
     
-            marker_52fd60afe4557474a7cdf77ccd2097a1.bindTooltip(
+            marker_c9d47948db13feddc64d11fcff5a5424.bindTooltip(
                 `<div>
-                     충남 서산시
+                     <h5>전남 장흥군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1908,48 +1908,48 @@
             );
         
     
-                marker_52fd60afe4557474a7cdf77ccd2097a1.setIcon(icon_96fc8ee768a7ca603f99ff365d32b0aa);
+                marker_c9d47948db13feddc64d11fcff5a5424.setIcon(icon_460ab84f8ecd1467f33da3b1187070df);
             
     
-            var marker_4ff5ab446a44dc18b3f06b27f824d17a = L.marker(
-                [34.9547, 126.338],
+            var marker_933c4aa4a87d94362dcea38282dbb587 = L.marker(
+                [34.4043, 126.2071],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_65590c6ca7a975dc9ab1aa89b9a566df = L.AwesomeMarkers.icon(
+            var icon_0a5d26afe6e8a414cd4c6cd831f3f824 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_aa4ecc15c1652153a18d4346f524b5ed = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_d58147aac836ed3b3055e0944261bdcb = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_d5e93fbf908388199d1f9c39ceb6cf96 = $(`<div id="html_d5e93fbf908388199d1f9c39ceb6cf96" style="width: 100.0%; height: 100.0%;">기준항: 전남 무안군 기준지역: 전남</div>`)[0];
-                popup_aa4ecc15c1652153a18d4346f524b5ed.setContent(html_d5e93fbf908388199d1f9c39ceb6cf96);
+                var html_f6c625fc07f5e6cb5dd4d2c523006d09 = $(`<div id="html_f6c625fc07f5e6cb5dd4d2c523006d09" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 진도군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.4043 / 126.2071</p></div>`)[0];
+                popup_d58147aac836ed3b3055e0944261bdcb.setContent(html_f6c625fc07f5e6cb5dd4d2c523006d09);
             
         
 
-        marker_4ff5ab446a44dc18b3f06b27f824d17a.bindPopup(popup_aa4ecc15c1652153a18d4346f524b5ed)
+        marker_933c4aa4a87d94362dcea38282dbb587.bindPopup(popup_d58147aac836ed3b3055e0944261bdcb)
         ;
 
         
     
     
-            marker_4ff5ab446a44dc18b3f06b27f824d17a.bindTooltip(
+            marker_933c4aa4a87d94362dcea38282dbb587.bindTooltip(
                 `<div>
-                     전남 무안군
+                     <h5>전남 진도군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -1957,48 +1957,48 @@
             );
         
     
-                marker_4ff5ab446a44dc18b3f06b27f824d17a.setIcon(icon_65590c6ca7a975dc9ab1aa89b9a566df);
+                marker_933c4aa4a87d94362dcea38282dbb587.setIcon(icon_0a5d26afe6e8a414cd4c6cd831f3f824);
             
     
-            var marker_aa2ae5043f9dd315f55e6d36ac8cc2d4 = L.marker(
-                [37.259, 126.4782],
+            var marker_1d83246dade3a6af68bae60a25b092fc = L.marker(
+                [35.0657, 126.5166],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_6b2842a91269d8bac22155e097d05f9a = L.AwesomeMarkers.icon(
+            var icon_3fa274f07ee7a587c807deeb3a3ce6db = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_727be33ec49b9e2b4b92e552e790624b = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_f91c0bb32225947be7f19f7b389dcd3c = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_6815a2d6354f9bce943f72ff8c56564f = $(`<div id="html_6815a2d6354f9bce943f72ff8c56564f" style="width: 100.0%; height: 100.0%;">기준항: 인천시 옹진군 기준지역: 인천시</div>`)[0];
-                popup_727be33ec49b9e2b4b92e552e790624b.setContent(html_6815a2d6354f9bce943f72ff8c56564f);
+                var html_678c9fbe650466fd7882674270594d83 = $(`<div id="html_678c9fbe650466fd7882674270594d83" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 함평군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 35.0657 / 126.5166</p></div>`)[0];
+                popup_f91c0bb32225947be7f19f7b389dcd3c.setContent(html_678c9fbe650466fd7882674270594d83);
             
         
 
-        marker_aa2ae5043f9dd315f55e6d36ac8cc2d4.bindPopup(popup_727be33ec49b9e2b4b92e552e790624b)
+        marker_1d83246dade3a6af68bae60a25b092fc.bindPopup(popup_f91c0bb32225947be7f19f7b389dcd3c)
         ;
 
         
     
     
-            marker_aa2ae5043f9dd315f55e6d36ac8cc2d4.bindTooltip(
+            marker_1d83246dade3a6af68bae60a25b092fc.bindTooltip(
                 `<div>
-                     인천시 옹진군
+                     <h5>전남 함평군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -2006,48 +2006,48 @@
             );
         
     
-                marker_aa2ae5043f9dd315f55e6d36ac8cc2d4.setIcon(icon_6b2842a91269d8bac22155e097d05f9a);
+                marker_1d83246dade3a6af68bae60a25b092fc.setIcon(icon_3fa274f07ee7a587c807deeb3a3ce6db);
             
     
-            var marker_e71504eb7941a5786ad9e0dbf88595aa = L.marker(
-                [36.5667, 126.4949],
+            var marker_d2ceb911f9e681620aa3ada289e9ec84 = L.marker(
+                [34.3766, 126.5273],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_f06a5835bdfcd74019a1da8388f550e9 = L.AwesomeMarkers.icon(
+            var icon_f4e0cbbb183ee6470200b01787464dac = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#3ba458",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_a3c1d6959a58c9a3b9fb8922753c7c6e = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_753190c14b68ef8b0a0a10b32c13d0dc = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_e0789e50e6e94c67b2ca86fb66096ce9 = $(`<div id="html_e0789e50e6e94c67b2ca86fb66096ce9" style="width: 100.0%; height: 100.0%;">기준항: 충남 홍성군 기준지역: 충남</div>`)[0];
-                popup_a3c1d6959a58c9a3b9fb8922753c7c6e.setContent(html_e0789e50e6e94c67b2ca86fb66096ce9);
+                var html_8f620a60dcb26245cc52e370cea245f9 = $(`<div id="html_8f620a60dcb26245cc52e370cea245f9" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전남 해남군</h5><p>✔️기준지역: 신안</p><p>✔️위치정보: 34.3766 / 126.5273</p></div>`)[0];
+                popup_753190c14b68ef8b0a0a10b32c13d0dc.setContent(html_8f620a60dcb26245cc52e370cea245f9);
             
         
 
-        marker_e71504eb7941a5786ad9e0dbf88595aa.bindPopup(popup_a3c1d6959a58c9a3b9fb8922753c7c6e)
+        marker_d2ceb911f9e681620aa3ada289e9ec84.bindPopup(popup_753190c14b68ef8b0a0a10b32c13d0dc)
         ;
 
         
     
     
-            marker_e71504eb7941a5786ad9e0dbf88595aa.bindTooltip(
+            marker_d2ceb911f9e681620aa3ada289e9ec84.bindTooltip(
                 `<div>
-                     충남 홍성군
+                     <h5>전남 해남군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -2055,48 +2055,48 @@
             );
         
     
-                marker_e71504eb7941a5786ad9e0dbf88595aa.setIcon(icon_f06a5835bdfcd74019a1da8388f550e9);
+                marker_d2ceb911f9e681620aa3ada289e9ec84.setIcon(icon_f4e0cbbb183ee6470200b01787464dac);
             
     
-            var marker_39fc3994bd5acc451fe18daaaab8c781 = L.marker(
-                [37.6313, 126.4968],
+            var marker_cb54a66490bab5a0e851a07c7f9266b1 = L.marker(
+                [35.479, 126.5976],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_e23e9700b86400b9fd62cbdb74f0ebd3 = L.AwesomeMarkers.icon(
+            var icon_c41c726306132411b0bc0bd3c54f279b = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#9ad486",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_66d514159eab8884bdc96dd0df1c6461 = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_dbba29148b4b53bd48a30bcd7a604a62 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_7d6cb944d179ac1094a2c9ed1ee18ed0 = $(`<div id="html_7d6cb944d179ac1094a2c9ed1ee18ed0" style="width: 100.0%; height: 100.0%;">기준항: 인천시 강화군 기준지역: 인천시</div>`)[0];
-                popup_66d514159eab8884bdc96dd0df1c6461.setContent(html_7d6cb944d179ac1094a2c9ed1ee18ed0);
+                var html_4615a0fb1c4370b9641633d33e502a4d = $(`<div id="html_4615a0fb1c4370b9641633d33e502a4d" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전북 고창군</h5><p>✔️기준지역: 부안</p><p>✔️위치정보: 35.479 / 126.5976</p></div>`)[0];
+                popup_dbba29148b4b53bd48a30bcd7a604a62.setContent(html_4615a0fb1c4370b9641633d33e502a4d);
             
         
 
-        marker_39fc3994bd5acc451fe18daaaab8c781.bindPopup(popup_66d514159eab8884bdc96dd0df1c6461)
+        marker_cb54a66490bab5a0e851a07c7f9266b1.bindPopup(popup_dbba29148b4b53bd48a30bcd7a604a62)
         ;
 
         
     
     
-            marker_39fc3994bd5acc451fe18daaaab8c781.bindTooltip(
+            marker_cb54a66490bab5a0e851a07c7f9266b1.bindTooltip(
                 `<div>
-                     인천시 강화군
+                     <h5>전북 고창군⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -2104,48 +2104,48 @@
             );
         
     
-                marker_39fc3994bd5acc451fe18daaaab8c781.setIcon(icon_e23e9700b86400b9fd62cbdb74f0ebd3);
+                marker_cb54a66490bab5a0e851a07c7f9266b1.setIcon(icon_c41c726306132411b0bc0bd3c54f279b);
             
     
-            var marker_2606b2e3aaf96ac07b3144720effa282 = L.marker(
-                [34.7457, 126.469],
+            var marker_947d95bd67b114101551736458339743 = L.marker(
+                [35.8513, 126.3757],
                 {
 }
-            ).addTo(map_71432ac4df3554a09f44685e5d841a1f);
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
         
     
-            var icon_f4ea7f3c720d64944885b3050681aab1 = L.AwesomeMarkers.icon(
+            var icon_3ea967e1be3b54289a5c6cf023515dd6 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
-  "iconColor": "white",
+  "markerColor": "white",
+  "iconColor": "#9ad486",
   "icon": "ship",
-  "prefix": "glyphicon",
+  "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_369568d86f18718c54f777490314601f = L.popup({
-  "maxWidth": 500,
-  "minWidth": 300,
+        var popup_24ec3846dfa054666b8ccc3ec54cc35a = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
 });
 
         
             
-                var html_a666fc67e0d9e95211330ab5b161a921 = $(`<div id="html_a666fc67e0d9e95211330ab5b161a921" style="width: 100.0%; height: 100.0%;">기준항: 전남 영암군 기준지역: 전남</div>`)[0];
-                popup_369568d86f18718c54f777490314601f.setContent(html_a666fc67e0d9e95211330ab5b161a921);
+                var html_0852596cc667663bed6fd83a42b85f3b = $(`<div id="html_0852596cc667663bed6fd83a42b85f3b" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전북 군산시</h5><p>✔️기준지역: 부안</p><p>✔️위치정보: 35.8513 / 126.3757</p></div>`)[0];
+                popup_24ec3846dfa054666b8ccc3ec54cc35a.setContent(html_0852596cc667663bed6fd83a42b85f3b);
             
         
 
-        marker_2606b2e3aaf96ac07b3144720effa282.bindPopup(popup_369568d86f18718c54f777490314601f)
+        marker_947d95bd67b114101551736458339743.bindPopup(popup_24ec3846dfa054666b8ccc3ec54cc35a)
         ;
 
         
     
     
-            marker_2606b2e3aaf96ac07b3144720effa282.bindTooltip(
+            marker_947d95bd67b114101551736458339743.bindTooltip(
                 `<div>
-                     전남 영암군
+                     <h5>전북 군산시⚓</h5>
                  </div>`,
                 {
   "sticky": true,
@@ -2153,7 +2153,1063 @@
             );
         
     
-                marker_2606b2e3aaf96ac07b3144720effa282.setIcon(icon_f4ea7f3c720d64944885b3050681aab1);
+                marker_947d95bd67b114101551736458339743.setIcon(icon_3ea967e1be3b54289a5c6cf023515dd6);
             
+    
+            var marker_a8fdbb63545bb76c8bdb8767885a7b85 = L.marker(
+                [35.6259, 126.5233],
+                {
+}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+            var icon_e482a307a29db86a68e9ce77ec7a1d83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#9ad486",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d5150dbd8e82832b1a86659eed20f9f = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_9f1632ea53efd75ff2f0951fcee73613 = $(`<div id="html_9f1632ea53efd75ff2f0951fcee73613" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 전북 부안군</h5><p>✔️기준지역: 부안</p><p>✔️위치정보: 35.6259 / 126.5233</p></div>`)[0];
+                popup_0d5150dbd8e82832b1a86659eed20f9f.setContent(html_9f1632ea53efd75ff2f0951fcee73613);
+            
+        
+
+        marker_a8fdbb63545bb76c8bdb8767885a7b85.bindPopup(popup_0d5150dbd8e82832b1a86659eed20f9f)
+        ;
+
+        
+    
+    
+            marker_a8fdbb63545bb76c8bdb8767885a7b85.bindTooltip(
+                `<div>
+                     <h5>전북 부안군⚓</h5>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a8fdbb63545bb76c8bdb8767885a7b85.setIcon(icon_e482a307a29db86a68e9ce77ec7a1d83);
+            
+    
+            var marker_64ea63918f9c2eeb6d8b1b64e940d85e = L.marker(
+                [33.4998, 126.3752],
+                {
+}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+            var icon_ae832bec3adfef0390e4f50472c6c827 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#0a703a",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4ad7238b3e42a7ef48723c0f7a4ce7d = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_bc16292b77a009cbf3217c7f5bf5069e = $(`<div id="html_bc16292b77a009cbf3217c7f5bf5069e" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 제주시</h5><p>✔️기준지역: 추자도</p><p>✔️위치정보: 33.4998 / 126.3752</p></div>`)[0];
+                popup_d4ad7238b3e42a7ef48723c0f7a4ce7d.setContent(html_bc16292b77a009cbf3217c7f5bf5069e);
+            
+        
+
+        marker_64ea63918f9c2eeb6d8b1b64e940d85e.bindPopup(popup_d4ad7238b3e42a7ef48723c0f7a4ce7d)
+        ;
+
+        
+    
+    
+            marker_64ea63918f9c2eeb6d8b1b64e940d85e.bindTooltip(
+                `<div>
+                     <h5>제주시⚓</h5>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_64ea63918f9c2eeb6d8b1b64e940d85e.setIcon(icon_ae832bec3adfef0390e4f50472c6c827);
+            
+    
+            var marker_cf2f169ae204d4ad694b00b187d40933 = L.marker(
+                [36.334, 126.6132],
+                {
+}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+            var icon_b662d4823cade8ab55ce69bf0d4f338e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#349a51",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5820be10021360796bf7e89a0bdaefee = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_7ad2baf3b4e92540142c555b8f2e6ae2 = $(`<div id="html_7ad2baf3b4e92540142c555b8f2e6ae2" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 충남 보령시</h5><p>✔️기준지역: 외연도</p><p>✔️위치정보: 36.334 / 126.6132</p></div>`)[0];
+                popup_5820be10021360796bf7e89a0bdaefee.setContent(html_7ad2baf3b4e92540142c555b8f2e6ae2);
+            
+        
+
+        marker_cf2f169ae204d4ad694b00b187d40933.bindPopup(popup_5820be10021360796bf7e89a0bdaefee)
+        ;
+
+        
+    
+    
+            marker_cf2f169ae204d4ad694b00b187d40933.bindTooltip(
+                `<div>
+                     <h5>충남 보령시⚓</h5>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf2f169ae204d4ad694b00b187d40933.setIcon(icon_b662d4823cade8ab55ce69bf0d4f338e);
+            
+    
+            var marker_b675d1b88bf8fcebfb96f0fb15ae9211 = L.marker(
+                [36.8727, 126.4226],
+                {
+}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+            var icon_7dbaed55643452215978ccd1ff2917e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#d5eea1",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_deefc3cf3c18ce613541270a88e9f2f6 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_316dccffa070de2b0d7d4f6852b60d09 = $(`<div id="html_316dccffa070de2b0d7d4f6852b60d09" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 충남 서산시</h5><p>✔️기준지역: 덕적도</p><p>✔️위치정보: 36.8727 / 126.4226</p></div>`)[0];
+                popup_deefc3cf3c18ce613541270a88e9f2f6.setContent(html_316dccffa070de2b0d7d4f6852b60d09);
+            
+        
+
+        marker_b675d1b88bf8fcebfb96f0fb15ae9211.bindPopup(popup_deefc3cf3c18ce613541270a88e9f2f6)
+        ;
+
+        
+    
+    
+            marker_b675d1b88bf8fcebfb96f0fb15ae9211.bindTooltip(
+                `<div>
+                     <h5>충남 서산시⚓</h5>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b675d1b88bf8fcebfb96f0fb15ae9211.setIcon(icon_7dbaed55643452215978ccd1ff2917e8);
+            
+    
+            var marker_8bcb9d3fa8fef3ccc0f0f4aa0d860143 = L.marker(
+                [36.0801, 126.6916],
+                {
+}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+            var icon_3d824e1480ea4482dbb7a806660c6112 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#349a51",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fef4323442984f044de5a002388bc526 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_185103c829ee4e47ec865df5e3bdfbb9 = $(`<div id="html_185103c829ee4e47ec865df5e3bdfbb9" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 충남 서천군</h5><p>✔️기준지역: 외연도</p><p>✔️위치정보: 36.0801 / 126.6916</p></div>`)[0];
+                popup_fef4323442984f044de5a002388bc526.setContent(html_185103c829ee4e47ec865df5e3bdfbb9);
+            
+        
+
+        marker_8bcb9d3fa8fef3ccc0f0f4aa0d860143.bindPopup(popup_fef4323442984f044de5a002388bc526)
+        ;
+
+        
+    
+    
+            marker_8bcb9d3fa8fef3ccc0f0f4aa0d860143.bindTooltip(
+                `<div>
+                     <h5>충남 서천군⚓</h5>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8bcb9d3fa8fef3ccc0f0f4aa0d860143.setIcon(icon_3d824e1480ea4482dbb7a806660c6112);
+            
+    
+            var marker_9f844e93608df8ae101f20b478b72b67 = L.marker(
+                [36.716, 126.2314],
+                {
+}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+            var icon_7459c094767b7bea3173961bddae96bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#d5eea1",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a006fcc33545dd91e4de1086e67771e9 = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_612b690ab1747678609d90255cbc34ff = $(`<div id="html_612b690ab1747678609d90255cbc34ff" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 충남 태안군</h5><p>✔️기준지역: 덕적도</p><p>✔️위치정보: 36.716 / 126.2314</p></div>`)[0];
+                popup_a006fcc33545dd91e4de1086e67771e9.setContent(html_612b690ab1747678609d90255cbc34ff);
+            
+        
+
+        marker_9f844e93608df8ae101f20b478b72b67.bindPopup(popup_a006fcc33545dd91e4de1086e67771e9)
+        ;
+
+        
+    
+    
+            marker_9f844e93608df8ae101f20b478b72b67.bindTooltip(
+                `<div>
+                     <h5>충남 태안군⚓</h5>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f844e93608df8ae101f20b478b72b67.setIcon(icon_7459c094767b7bea3173961bddae96bc);
+            
+    
+            var marker_9f6ac4cb8a6ed99d26fe49fa68f7db86 = L.marker(
+                [36.582, 126.5761],
+                {
+}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+            var icon_706fd2c91e78c337f4c051ad3da8c5e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#349a51",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5c70ccf6a386d565251cbd7427c325a = L.popup({
+  "maxWidth": 200,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_5bf7586aa7552bc3048beb10067b419d = $(`<div id="html_5bf7586aa7552bc3048beb10067b419d" style="width: 100.0%; height: 100.0%;"><h5>⚓기준항: 충남 홍성군</h5><p>✔️기준지역: 외연도</p><p>✔️위치정보: 36.582 / 126.5761</p></div>`)[0];
+                popup_f5c70ccf6a386d565251cbd7427c325a.setContent(html_5bf7586aa7552bc3048beb10067b419d);
+            
+        
+
+        marker_9f6ac4cb8a6ed99d26fe49fa68f7db86.bindPopup(popup_f5c70ccf6a386d565251cbd7427c325a)
+        ;
+
+        
+    
+    
+            marker_9f6ac4cb8a6ed99d26fe49fa68f7db86.bindTooltip(
+                `<div>
+                     <h5>충남 홍성군⚓</h5>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f6ac4cb8a6ed99d26fe49fa68f7db86.setIcon(icon_706fd2c91e78c337f4c051ad3da8c5e7);
+            
+    
+            var circle_marker_d83b77f03ee0443c5a7fc0a8afd506c1 = L.circleMarker(
+                [34.0275, 125.21472222],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_db40d1f3e624ce7cdc51cafb79a96282 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8af649ff3c07593ed928c2cda3a3c5e4 = $(`<div id="html_8af649ff3c07593ed928c2cda3a3c5e4" style="width: 100.0%; height: 100.0%;"><p>관측소: 가거도(22297)</p><p>위치정보: 34.0275 /125.21472222</p></div>`)[0];
+                popup_db40d1f3e624ce7cdc51cafb79a96282.setContent(html_8af649ff3c07593ed928c2cda3a3c5e4);
+            
+        
+
+        circle_marker_d83b77f03ee0443c5a7fc0a8afd506c1.bindPopup(popup_db40d1f3e624ce7cdc51cafb79a96282)
+        ;
+
+        
+    
+    
+            var circle_marker_e30a901452af9415c6c8454aa086bae3 = L.circleMarker(
+                [34.00135, 127.50127222],
+                {"bubblingMouseEvents": true, "color": "#fcfed9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcfed9", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_aad5d8bda26bcf4bd5c02fe0dc14d8f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_966c702e97b82c9d386ff9b029efc638 = $(`<div id="html_966c702e97b82c9d386ff9b029efc638" style="width: 100.0%; height: 100.0%;"><p>관측소: 거문도(22103)</p><p>위치정보: 34.00135/127.50127222</p></div>`)[0];
+                popup_aad5d8bda26bcf4bd5c02fe0dc14d8f0.setContent(html_966c702e97b82c9d386ff9b029efc638);
+            
+        
+
+        circle_marker_e30a901452af9415c6c8454aa086bae3.bindPopup(popup_aad5d8bda26bcf4bd5c02fe0dc14d8f0)
+        ;
+
+        
+    
+    
+            var circle_marker_436c76ff63e003aa102f23c86f99e29d = L.circleMarker(
+                [34.7667, 128.9],
+                {"bubblingMouseEvents": true, "color": "#fafdce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fafdce", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_e03f4d213411269ed0c6644ed58b19f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf2644bf059378e44185051f77eed8db = $(`<div id="html_bf2644bf059378e44185051f77eed8db" style="width: 100.0%; height: 100.0%;"><p>관측소: 거제도(22104)</p><p>위치정보: 34.7667 /128.9</p></div>`)[0];
+                popup_e03f4d213411269ed0c6644ed58b19f1.setContent(html_bf2644bf059378e44185051f77eed8db);
+            
+        
+
+        circle_marker_436c76ff63e003aa102f23c86f99e29d.bindPopup(popup_e03f4d213411269ed0c6644ed58b19f1)
+        ;
+
+        
+    
+    
+            var circle_marker_736630b7752881dd86c35b1ca4ef59b2 = L.circleMarker(
+                [38.31722222, 128.63916667],
+                {"bubblingMouseEvents": true, "color": "#f8fcc3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f8fcc3", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_ffbecfcb099c75f1831e6504327091ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0bf5a7d1aa7d1a97b2af0a158f35698e = $(`<div id="html_0bf5a7d1aa7d1a97b2af0a158f35698e" style="width: 100.0%; height: 100.0%;"><p>관측소: 고성(22310)</p><p>위치정보: 38.31722222/128.63916667</p></div>`)[0];
+                popup_ffbecfcb099c75f1831e6504327091ad.setContent(html_0bf5a7d1aa7d1a97b2af0a158f35698e);
+            
+        
+
+        circle_marker_736630b7752881dd86c35b1ca4ef59b2.bindPopup(popup_ffbecfcb099c75f1831e6504327091ad)
+        ;
+
+        
+    
+    
+            var circle_marker_f6c72cdb102ff9cbfbfabb13cb1932fb = L.circleMarker(
+                [33.775, 128.375],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_0cc24b7347b5132079d39e949e1e0c3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f10b0bd6997c3d039ba5afe3ace2000 = $(`<div id="html_4f10b0bd6997c3d039ba5afe3ace2000" style="width: 100.0%; height: 100.0%;"><p>관측소: 남해111(22309)</p><p>위치정보: 33.775 /128.375</p></div>`)[0];
+                popup_0cc24b7347b5132079d39e949e1e0c3b.setContent(html_4f10b0bd6997c3d039ba5afe3ace2000);
+            
+        
+
+        circle_marker_f6c72cdb102ff9cbfbfabb13cb1932fb.bindPopup(popup_0cc24b7347b5132079d39e949e1e0c3b)
+        ;
+
+        
+    
+    
+            var circle_marker_ad5ea6873b73eaf9196126983f364643 = L.circleMarker(
+                [32.83333333, 124.73333333],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_c6ed2849f75778c45de1bc1186791fc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01d2f6f5b54d92b4842343a00010c3cc = $(`<div id="html_01d2f6f5b54d92b4842343a00010c3cc" style="width: 100.0%; height: 100.0%;"><p>관측소: 남해239(22300)</p><p>위치정보: 32.83333333 /124.73333333</p></div>`)[0];
+                popup_c6ed2849f75778c45de1bc1186791fc6.setContent(html_01d2f6f5b54d92b4842343a00010c3cc);
+            
+        
+
+        circle_marker_ad5ea6873b73eaf9196126983f364643.bindPopup(popup_c6ed2849f75778c45de1bc1186791fc6)
+        ;
+
+        
+    
+    
+            var circle_marker_b5041c3e395f156c52b52c8efdce5434 = L.circleMarker(
+                [32.72222222, 127.27222222],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_f72d6265a2f4204a04a2661596b90658 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1520fc70cbc077f2c571038538d34801 = $(`<div id="html_1520fc70cbc077f2c571038538d34801" style="width: 100.0%; height: 100.0%;"><p>관측소: 남해244(22304)</p><p>위치정보: 32.72222222/127.27222222</p></div>`)[0];
+                popup_f72d6265a2f4204a04a2661596b90658.setContent(html_1520fc70cbc077f2c571038538d34801);
+            
+        
+
+        circle_marker_b5041c3e395f156c52b52c8efdce5434.bindPopup(popup_f72d6265a2f4204a04a2661596b90658)
+        ;
+
+        
+    
+    
+            var circle_marker_20022429e59edce0c921fc0a5167b938 = L.circleMarker(
+                [31.66666667, 126.4],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_aa3c4454edf15fbc72fe32b4950f2981 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11bc2ace28f696b60b37e90073a0bce6 = $(`<div id="html_11bc2ace28f696b60b37e90073a0bce6" style="width: 100.0%; height: 100.0%;"><p>관측소: 남해465(22301)</p><p>위치정보: 31.66666667/126.4</p></div>`)[0];
+                popup_aa3c4454edf15fbc72fe32b4950f2981.setContent(html_11bc2ace28f696b60b37e90073a0bce6);
+            
+        
+
+        circle_marker_20022429e59edce0c921fc0a5167b938.bindPopup(popup_aa3c4454edf15fbc72fe32b4950f2981)
+        ;
+
+        
+    
+    
+            var circle_marker_621fb6d7451dff134d6c3adf9ef4c964 = L.circleMarker(
+                [37.23611111, 126.01875],
+                {"bubblingMouseEvents": true, "color": "#d5eea1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d5eea1", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_1f2588fb8b90ecd12a779dda9e197902 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06ed613afc8b1caea2229d9024b8c90c = $(`<div id="html_06ed613afc8b1caea2229d9024b8c90c" style="width: 100.0%; height: 100.0%;"><p>관측소: 덕적도(22101)</p><p>위치정보: 37.23611111/126.01875</p></div>`)[0];
+                popup_1f2588fb8b90ecd12a779dda9e197902.setContent(html_06ed613afc8b1caea2229d9024b8c90c);
+            
+        
+
+        circle_marker_621fb6d7451dff134d6c3adf9ef4c964.bindPopup(popup_1f2588fb8b90ecd12a779dda9e197902)
+        ;
+
+        
+    
+    
+            var circle_marker_3adc54612eadfaeb0f8de7c12563a9bc = L.circleMarker(
+                [37.48056, 129.95],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_a7d322409cd35050001c0bc032688a8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0588ac2921a8cfa0b79934917dc24fc = $(`<div id="html_b0588ac2921a8cfa0b79934917dc24fc" style="width: 100.0%; height: 100.0%;"><p>관측소: 동해(22105)</p><p>위치정보: 37.48056/129.95</p></div>`)[0];
+                popup_a7d322409cd35050001c0bc032688a8f.setContent(html_b0588ac2921a8cfa0b79934917dc24fc);
+            
+        
+
+        circle_marker_3adc54612eadfaeb0f8de7c12563a9bc.bindPopup(popup_a7d322409cd35050001c0bc032688a8f)
+        ;
+
+        
+    
+    
+            var circle_marker_1fa75d2897a9de06dbeed688d2e73fc9 = L.circleMarker(
+                [38.36667, 129.6],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_49ddcb23cb37e265c8231592d909f985 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d0d6be41b5fe2af6f2ffa8e8e571eea = $(`<div id="html_9d0d6be41b5fe2af6f2ffa8e8e571eea" style="width: 100.0%; height: 100.0%;"><p>관측소: 동해57(22305)</p><p>위치정보: 38.36667 /129.6</p></div>`)[0];
+                popup_49ddcb23cb37e265c8231592d909f985.setContent(html_9d0d6be41b5fe2af6f2ffa8e8e571eea);
+            
+        
+
+        circle_marker_1fa75d2897a9de06dbeed688d2e73fc9.bindPopup(popup_49ddcb23cb37e265c8231592d909f985)
+        ;
+
+        
+    
+    
+            var circle_marker_347c6854a2e5645849e8a16aafa4dd85 = L.circleMarker(
+                [36.96666667, 130.51666667],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_71a1b813a64f4d8a11468482825adf92 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73337536f489f16e5af11f7183ca3912 = $(`<div id="html_73337536f489f16e5af11f7183ca3912" style="width: 100.0%; height: 100.0%;"><p>관측소: 동해78(22302)</p><p>위치정보: 36.96666667/130.51666667</p></div>`)[0];
+                popup_71a1b813a64f4d8a11468482825adf92.setContent(html_73337536f489f16e5af11f7183ca3912);
+            
+        
+
+        circle_marker_347c6854a2e5645849e8a16aafa4dd85.bindPopup(popup_71a1b813a64f4d8a11468482825adf92)
+        ;
+
+        
+    
+    
+            var circle_marker_cef1d2547f37342e3aea73aa2511e631 = L.circleMarker(
+                [33.0833, 126.0333],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_3ec962618fcac48c2221defb6b72dcc9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3a37d4f5048938c9924ade1640780c2 = $(`<div id="html_f3a37d4f5048938c9924ade1640780c2" style="width: 100.0%; height: 100.0%;"><p>관측소: 마라도(22107)</p><p>위치정보: 33.0833/126.0333</p></div>`)[0];
+                popup_3ec962618fcac48c2221defb6b72dcc9.setContent(html_f3a37d4f5048938c9924ade1640780c2);
+            
+        
+
+        circle_marker_cef1d2547f37342e3aea73aa2511e631.bindPopup(popup_3ec962618fcac48c2221defb6b72dcc9)
+        ;
+
+        
+    
+    
+            var circle_marker_c56572dc4b3b2fbb30c99fbe4297487c = L.circleMarker(
+                [35.65861111, 125.81388889],
+                {"bubblingMouseEvents": true, "color": "#9ad486", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9ad486", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_210b88069a37c7c1080c4e8cbedd6050 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4dfa5dc3f38a071415a387d9b02daecf = $(`<div id="html_4dfa5dc3f38a071415a387d9b02daecf" style="width: 100.0%; height: 100.0%;"><p>관측소: 부안(22186)</p><p>위치정보:  35.65861111/125.81388889</p></div>`)[0];
+                popup_210b88069a37c7c1080c4e8cbedd6050.setContent(html_4dfa5dc3f38a071415a387d9b02daecf);
+            
+        
+
+        circle_marker_c56572dc4b3b2fbb30c99fbe4297487c.bindPopup(popup_210b88069a37c7c1080c4e8cbedd6050)
+        ;
+
+        
+    
+    
+            var circle_marker_ab8b8116147239429723a536c756d2b7 = L.circleMarker(
+                [37.46388889, 129.31805556],
+                {"bubblingMouseEvents": true, "color": "#8ccf81", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ccf81", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_9985d582ab2429e047a4161f8f4ed335 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb3aeb5798cdd997b6f5d7d01ee141ea = $(`<div id="html_eb3aeb5798cdd997b6f5d7d01ee141ea" style="width: 100.0%; height: 100.0%;"><p>관측소: 삼척(22311)</p><p>위치정보: 37.46388889/129.31805556</p></div>`)[0];
+                popup_9985d582ab2429e047a4161f8f4ed335.setContent(html_eb3aeb5798cdd997b6f5d7d01ee141ea);
+            
+        
+
+        circle_marker_ab8b8116147239429723a536c756d2b7.bindPopup(popup_9985d582ab2429e047a4161f8f4ed335)
+        ;
+
+        
+    
+    
+            var circle_marker_40980d0063d403bb8c1caef7d65ae345 = L.circleMarker(
+                [33.12805556, 127.02277778],
+                {"bubblingMouseEvents": true, "color": "#7fc97b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7fc97b", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_3a4cbf1413dd39970e4b0052800dab8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_897cf0535cf0ce2edb987375b1fbc435 = $(`<div id="html_897cf0535cf0ce2edb987375b1fbc435" style="width: 100.0%; height: 100.0%;"><p>관측소: 서귀포(22187)</p><p>위치정보: 33.12805556 /127.02277778</p></div>`)[0];
+                popup_3a4cbf1413dd39970e4b0052800dab8d.setContent(html_897cf0535cf0ce2edb987375b1fbc435);
+            
+        
+
+        circle_marker_40980d0063d403bb8c1caef7d65ae345.bindPopup(popup_3a4cbf1413dd39970e4b0052800dab8d)
+        ;
+
+        
+    
+    
+            var circle_marker_319902946fd16c3b7ee07a83a438d1e0 = L.circleMarker(
+                [37.5, 124.01667],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_03cae75202c9d7a9bd57e0d34441814e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b602454dedc1639a5e1be44e0d123152 = $(`<div id="html_b602454dedc1639a5e1be44e0d123152" style="width: 100.0%; height: 100.0%;"><p>관측소: 서해143(22193)</p><p>위치정보:  37.5 /124.01667</p></div>`)[0];
+                popup_03cae75202c9d7a9bd57e0d34441814e.setContent(html_b602454dedc1639a5e1be44e0d123152);
+            
+        
+
+        circle_marker_319902946fd16c3b7ee07a83a438d1e0.bindPopup(popup_03cae75202c9d7a9bd57e0d34441814e)
+        ;
+
+        
+    
+    
+            var circle_marker_3c66c9d4622783aa454b8b9ce70f2221 = L.circleMarker(
+                [36.13333333, 124.05694444],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_a627a707452a9df44c47cedf8f33986b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82869a22cf646df6428bf4282bb81cd5 = $(`<div id="html_82869a22cf646df6428bf4282bb81cd5" style="width: 100.0%; height: 100.0%;"><p>관측소: 서해170 (22191)</p><p>위치정보: 36.13333333 /124.05694444</p></div>`)[0];
+                popup_a627a707452a9df44c47cedf8f33986b.setContent(html_82869a22cf646df6428bf4282bb81cd5);
+            
+        
+
+        circle_marker_3c66c9d4622783aa454b8b9ce70f2221.bindPopup(popup_a627a707452a9df44c47cedf8f33986b)
+        ;
+
+        
+    
+    
+            var circle_marker_3fb4b0ecbcb42db2f30a569449587e3c = L.circleMarker(
+                [35.0, 124.13333333],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_c665472b5049aed96c34ccf6e0960b20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3533a9aa3a7c90735f616359070f3bda = $(`<div id="html_3533a9aa3a7c90735f616359070f3bda" style="width: 100.0%; height: 100.0%;"><p>관측소: 서해190(22299)</p><p>위치정보: 35/124.13333333</p></div>`)[0];
+                popup_c665472b5049aed96c34ccf6e0960b20.setContent(html_3533a9aa3a7c90735f616359070f3bda);
+            
+        
+
+        circle_marker_3fb4b0ecbcb42db2f30a569449587e3c.bindPopup(popup_c665472b5049aed96c34ccf6e0960b20)
+        ;
+
+        
+    
+    
+            var circle_marker_ec47e967bff620ce705007fbdce8e056 = L.circleMarker(
+                [34.0, 123.2625],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_71e6071a71a0559554bb982360626f98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b2e54cc1d91c1f7b0acb084b8afcba4 = $(`<div id="html_2b2e54cc1d91c1f7b0acb084b8afcba4" style="width: 100.0%; height: 100.0%;"><p>관측소: 서해206(22192)</p><p>위치정보: 34 /123.2625</p></div>`)[0];
+                popup_71e6071a71a0559554bb982360626f98.setContent(html_2b2e54cc1d91c1f7b0acb084b8afcba4);
+            
+        
+
+        circle_marker_ec47e967bff620ce705007fbdce8e056.bindPopup(popup_71e6071a71a0559554bb982360626f98)
+        ;
+
+        
+    
+    
+            var circle_marker_a2ce44eeee86ff960a6aea5a0023e790 = L.circleMarker(
+                [34.73333333, 126.2417],
+                {"bubblingMouseEvents": true, "color": "#3ba458", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3ba458", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_53a14c6a080d69189df212a2e8392d20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ca98be1b8e1f15278d83fe25981f226 = $(`<div id="html_3ca98be1b8e1f15278d83fe25981f226" style="width: 100.0%; height: 100.0%;"><p>관측소: 신안(22183)</p><p>위치정보: 34.73333333 /126.2417</p></div>`)[0];
+                popup_53a14c6a080d69189df212a2e8392d20.setContent(html_3ca98be1b8e1f15278d83fe25981f226);
+            
+        
+
+        circle_marker_a2ce44eeee86ff960a6aea5a0023e790.bindPopup(popup_53a14c6a080d69189df212a2e8392d20)
+        ;
+
+        
+    
+    
+            var circle_marker_112832a1aeb90a15ff7d179c32b7be75 = L.circleMarker(
+                [36.25, 125.75],
+                {"bubblingMouseEvents": true, "color": "#349a51", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#349a51", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_4a9d1f2148b5c4e0e0ef1b8ea9908879 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe361dcc720e97f68e80dbb3aa82874b = $(`<div id="html_fe361dcc720e97f68e80dbb3aa82874b" style="width: 100.0%; height: 100.0%;"><p>관측소: 외연도(22108)</p><p>위치정보: 36.25/125.75</p></div>`)[0];
+                popup_4a9d1f2148b5c4e0e0ef1b8ea9908879.setContent(html_fe361dcc720e97f68e80dbb3aa82874b);
+            
+        
+
+        circle_marker_112832a1aeb90a15ff7d179c32b7be75.bindPopup(popup_4a9d1f2148b5c4e0e0ef1b8ea9908879)
+        ;
+
+        
+    
+    
+            var circle_marker_1476a731c03f4dcb595166568d93dff0 = L.circleMarker(
+                [37.4554, 131.1144],
+                {"bubblingMouseEvents": true, "color": "#2c904b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2c904b", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_d4b8e79bd1e56fc1296fb0647736b4b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_741a4fd5d2deba1be26cf7ce78243167 = $(`<div id="html_741a4fd5d2deba1be26cf7ce78243167" style="width: 100.0%; height: 100.0%;"><p>관측소: 울릉도(21229)</p><p>위치정보: 37.4554/131.1144</p></div>`)[0];
+                popup_d4b8e79bd1e56fc1296fb0647736b4b2.setContent(html_741a4fd5d2deba1be26cf7ce78243167);
+            
+        
+
+        circle_marker_1476a731c03f4dcb595166568d93dff0.bindPopup(popup_d4b8e79bd1e56fc1296fb0647736b4b2)
+        ;
+
+        
+    
+    
+            var circle_marker_c63a41632a1817e8553d3c3f1c9a6409 = L.circleMarker(
+                [35.34527778, 129.84138889],
+                {"bubblingMouseEvents": true, "color": "#258644", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#258644", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_8c22793c008acda070fdd7cd4ac572c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5869cbef9a05a834f838a7ffd2abd4c2 = $(`<div id="html_5869cbef9a05a834f838a7ffd2abd4c2" style="width: 100.0%; height: 100.0%;"><p>관측소: 울산(22189)</p><p>위치정보: 35.34527778/129.84138889</p></div>`)[0];
+                popup_8c22793c008acda070fdd7cd4ac572c9.setContent(html_5869cbef9a05a834f838a7ffd2abd4c2);
+            
+        
+
+        circle_marker_c63a41632a1817e8553d3c3f1c9a6409.bindPopup(popup_8c22793c008acda070fdd7cd4ac572c9)
+        ;
+
+        
+    
+    
+            var circle_marker_c90976c3351fcd3550544d529b2228de = L.circleMarker(
+                [36.90694444, 129.87444444],
+                {"bubblingMouseEvents": true, "color": "#1b7e40", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1b7e40", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_5f0fb032c035c7d592f63f0c8cc9a273 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03a443c34b52fdb4c24cf2f3960aa54e = $(`<div id="html_03a443c34b52fdb4c24cf2f3960aa54e" style="width: 100.0%; height: 100.0%;"><p>관측소: 울진(22190)</p><p>위치정보: 36.90694444/129.87444444</p></div>`)[0];
+                popup_5f0fb032c035c7d592f63f0c8cc9a273.setContent(html_03a443c34b52fdb4c24cf2f3960aa54e);
+            
+        
+
+        circle_marker_c90976c3351fcd3550544d529b2228de.bindPopup(popup_5f0fb032c035c7d592f63f0c8cc9a273)
+        ;
+
+        
+    
+    
+            var circle_marker_0e24aa32532d46a0d68230c1356eb8d3 = L.circleMarker(
+                [37.09166667, 125.42888889],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_e3ef026d73a231af18bbb6c8eea5c13a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c88c3a2b52e99b491a458eb76ba49fb5 = $(`<div id="html_c88c3a2b52e99b491a458eb76ba49fb5" style="width: 100.0%; height: 100.0%;"><p>관측소: 인천(22185)</p><p>위치정보: 37.09166667/125.42888889</p></div>`)[0];
+                popup_e3ef026d73a231af18bbb6c8eea5c13a.setContent(html_c88c3a2b52e99b491a458eb76ba49fb5);
+            
+        
+
+        circle_marker_0e24aa32532d46a0d68230c1356eb8d3.bindPopup(popup_e3ef026d73a231af18bbb6c8eea5c13a)
+        ;
+
+        
+    
+    
+            var circle_marker_911a60f02a1bee20d8f1c741e2229722 = L.circleMarker(
+                [33.79361, 126.14111111],
+                {"bubblingMouseEvents": true, "color": "#0a703a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0a703a", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_c7e1ee3df21b5393e03635349aaf9a28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fc31d1d091fd6ef1790331b737aa546 = $(`<div id="html_7fc31d1d091fd6ef1790331b737aa546" style="width: 100.0%; height: 100.0%;"><p>관측소: 추자도(22184)</p><p>위치정보: 33.79361/ 126.14111111</p></div>`)[0];
+                popup_c7e1ee3df21b5393e03635349aaf9a28.setContent(html_7fc31d1d091fd6ef1790331b737aa546);
+            
+        
+
+        circle_marker_911a60f02a1bee20d8f1c741e2229722.bindPopup(popup_c7e1ee3df21b5393e03635349aaf9a28)
+        ;
+
+        
+    
+    
+            var circle_marker_64aa10b1d3a9c7195b44b9de1e8e64de = L.circleMarker(
+                [34.7933, 125.7769],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_8d7f847279f045415813e59a8ee31d0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9a5e70a817e969125cc60376b604b2e = $(`<div id="html_e9a5e70a817e969125cc60376b604b2e" style="width: 100.0%; height: 100.0%;"><p>관측소: 칠발도(22102)</p><p>위치정보: 34.7933/125.7769</p></div>`)[0];
+                popup_8d7f847279f045415813e59a8ee31d0e.setContent(html_e9a5e70a817e969125cc60376b604b2e);
+            
+        
+
+        circle_marker_64aa10b1d3a9c7195b44b9de1e8e64de.bindPopup(popup_8d7f847279f045415813e59a8ee31d0e)
+        ;
+
+        
+    
+    
+            var circle_marker_e01e4a26ac948a3281893f98a7c68d12 = L.circleMarker(
+                [34.39166667, 128.225],
+                {"bubblingMouseEvents": true, "color": "#005f33", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#005f33", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_dc341662d525d66be743a8135d1bc237 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_265e4fb2fec0bae6636fcfd291a0e74b = $(`<div id="html_265e4fb2fec0bae6636fcfd291a0e74b" style="width: 100.0%; height: 100.0%;"><p>관측소: 통영(22188)</p><p>위치정보: 34.39166667/128.225</p></div>`)[0];
+                popup_dc341662d525d66be743a8135d1bc237.setContent(html_265e4fb2fec0bae6636fcfd291a0e74b);
+            
+        
+
+        circle_marker_e01e4a26ac948a3281893f98a7c68d12.bindPopup(popup_dc341662d525d66be743a8135d1bc237)
+        ;
+
+        
+    
+    
+            var circle_marker_dc4874640373956ae2d88cb5d66c87a6 = L.circleMarker(
+                [36.35, 129.78333333],
+                {"bubblingMouseEvents": true, "color": "#005630", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#005630", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_f6214db3301deadfd34afbe8ccade29c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_739e572c4d2a546633de0b1a33f76aac = $(`<div id="html_739e572c4d2a546633de0b1a33f76aac" style="width: 100.0%; height: 100.0%;"><p>관측소: 포항 (22106)</p><p>위치정보: 36.35 /129.78333333</p></div>`)[0];
+                popup_f6214db3301deadfd34afbe8ccade29c.setContent(html_739e572c4d2a546633de0b1a33f76aac);
+            
+        
+
+        circle_marker_dc4874640373956ae2d88cb5d66c87a6.bindPopup(popup_f6214db3301deadfd34afbe8ccade29c)
+        ;
+
+        
+    
+    
+            var circle_marker_c5148381727169b9740ee751345a98da = L.circleMarker(
+                [34.74666667, 125.24555556],
+                {"bubblingMouseEvents": true, "color": "#999999", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#999999", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 80, "stroke": true, "weight": 3}
+            ).addTo(map_b1844706e488c3eb5899a2ab90ae153b);
+        
+    
+        var popup_0185e168ae6f29e761849c5fc6de81df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b0f475e265a5c3f558adc012c9543f2 = $(`<div id="html_9b0f475e265a5c3f558adc012c9543f2" style="width: 100.0%; height: 100.0%;"><p>관측소: 홍도(22298)</p><p>위치정보: 34.74666667/125.24555556</p></div>`)[0];
+                popup_0185e168ae6f29e761849c5fc6de81df.setContent(html_9b0f475e265a5c3f558adc012c9543f2);
+            
+        
+
+        circle_marker_c5148381727169b9740ee751345a98da.bindPopup(popup_0185e168ae6f29e761849c5fc6de81df)
+        ;
+
+        
+    
 </script>
 </html>

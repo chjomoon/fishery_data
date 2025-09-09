@@ -27,7 +27,7 @@ def index(request) :
       #"card" : cards,
       "data_list":dv.df.head(10).to_html(classes='my-table', index=False,col_space=10),
       "map" : mv.getMapHtml(),
-      "map_list" : mv.df.iloc[:20,[1,6,7,8,9]].sort_values(by='기준지역', ascending=False).to_html(index=False),
+      "map_list" : mv.df.iloc[:15,[0,1,2,-1]].to_html(index=False),
       "data_path" : 'web_app/images/fig.png', 
       "date" : f"{timezone.now()}"
     }    
