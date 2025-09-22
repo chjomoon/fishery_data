@@ -6,36 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <style>
-
       header {
-        background-color: teal;
+        background-color: #001D3D;
         color: #ffffff;
-        height: 10rem;
+        height: 9.5rem;
         width : 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 10px; 
+        padding: 0 0; 
         border-bottom: 1px solid var(--color-light-gray);
         position: fixed;
       }  
-      .w1200 {
-        width: 1200px;
-        margin: auto;
+      .nav-links a {
+        color: white;              /* 흰색 폰트 */
+        text-decoration: none;    /* 밑줄 제거 */
+        margin-left: 20px;
+        font-weight: bold;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline; /* 마우스 올리면 밑줄 생기게 (선택사항) */
       }
     </style>
   </head>
   <body>
     <header>  
-      <div class = 'w1200'>
+      <div class>
         <div>
-            <h1>수온에 따른 어획량 데이터분석</h1>
+            <h1 style = 'padding-left: 10px;'>⚓수온에 따른 어획량 데이터분석</h1>
         </div>
-        <div>
-            <span>✅ nav1</span>
-            <span>✅ nav2</span>
-            <span>✅ nav3</span>
-            <span>✅ nav4</span>
+        <div class="nav-links">
+           <span><a href="{% url 'web_app:home' %}">🌊처음으로</a></span>
+           <span><a href="{% url 'web_app:pairplot' %}">🌊페어플롯</a></span>
+           <span><a href="{% url 'web_app:heatmap' %}">🌊히트맵</a></span>
+           <span><a href="{% url 'web_app:predict' %}">🌊출하량분석</a></span>
         </div>
       </div>      
     </header>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <title>예측 결과</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+/* 기본 설정 */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'SUIT-Regular', 'Segoe UI', sans-serif;
+        color: #111111;
+        background: #fff;
+        overflow-x: hidden;
+        letter-spacing: -0.4px;
+    }
+
+    table,th,tr,td {
+            color : teal;
+            font-size: 1.5rem;
+            margin-inline-start: 5%;
+            margin: 10px auto; 
+            text-align: center; 
+            padding: 5px;
+            border: 2px solid white;
+            border-collapse : collapse;
+        }
+    /* 헤더/푸터 */
+    header, footer {
+        width: 100%;
+        padding: 1rem 2rem;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* 카드 레이아웃 컨테이너 */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 100%;
+        margin: 2rem auto;
+        width: 95%;
+    }
+
+    /* 카드 개별 */
+    .card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        padding: 2rem;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    /* 카드 제목 */
+    .card h1, .card h3 {
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* 지도 */
+    #map {
+        height: 400px;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    /* 카드 배치: 3개일 경우 1열 2개, 2열 1개 */
+    .card-container .card:nth-child(3) {
+        grid-column: span 2;
+    }
+    .coords {
+    margin-left: 20px; /* 전체 들여쓰기 */
+    list-style-type: none; /* 동그라미 없애고 싶으면 */
+    padding-left: 10px;
+    }
+    .coords li::before {
+        content: '☑️'; /* 앞에 화살표 아이콘 넣기 (선택사항) */
+        color: gray;
+    }
+
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+        .card-container {
+            grid-template-columns: 1fr; /* 모바일 1열 */
+        }
+        .card-container .card:nth-child(3) {
+            grid-column: auto; /* 일반 1열 */
+        }
+        .card {
+            padding: 1.5rem;
+            font-size: 1.3rem;
+        }
+        table, th, td {
+            font-size: 1.1rem;
+        }
+    }
+
+</style>
+ 
+</head>
+{% include 'web_app/header.html' %}
+<body>
+    <div style="padding-top:120px;"></div>
+    <div class = 'card-container'>
+        <div class="card">
+            <h2>예측 결과</h2>
+            <br>
+            <h3>🎣예상 출하중량: <b>{{ prediction }} t</b></h3>
+            <hr/>
+            <ul>
+                <p>✅선택날짜: {{ date }}</p>
+                <p>✅입력 위치</p>
+                <p>✅좌표
+                    <ul class="coords">
+                        <li>위도: {{ lat }}</li>
+                        <li>경도: {{ lon }}</li>
+                    </ul>
+                </li>
+                <p>✅가장 가까운 지점: {{ station_name }} ({{ station_id }})</p>
+                <p>✅{{ station_name }} 관측소와의 거리: {{ distance }} km</p>
+            </ul>
+            
+        </div>
+        <div class = 'card'>
+            <p>상세위치</p>
+            <div id="map"></div>
+        </div>
+    </div>
+    {% include 'web_app/footer.html' %}
+    
+</body>
+<script>
+        var map = L.map('map').setView([{{ lat }}, {{ lon }}], 9);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 사용자 위치 마커
+        L.marker([{{ lat }}, {{ lon }}]).addTo(map)
+        .bindPopup("사용자 입력 위치").openPopup();
+
+        // 가까운 지점 마커
+        L.marker([{{ buoy.위도 }}, {{ buoy.경도 }}]).addTo(map)
+        .bindPopup("{{ station_name }} ({{ station_id }})");
+    </script>
+</html>

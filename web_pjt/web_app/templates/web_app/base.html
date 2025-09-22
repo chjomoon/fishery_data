@@ -1,21 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}My Site{% endblock %}</title>
     <style>
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
             z-index: 1000; /* 카드보다 높게 설정 */
-            background-color: #ffffff; /* 배경색 없으면 카드가 비쳐 보일 수 있음 */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 선택 사항: 아래 그림자 */
+            
         }
-
         body {
-            margin: 0px;
             color: #111111;
             background: #fff;
             font-family: 'SUIT-Regular', sans-serif;
@@ -24,16 +18,19 @@
         }
          table,th,tr,td {
             color : teal;
-            font-size: 15px;
+            font-size: 1rem;
             font-weight:bold;
             margin-inline-start: 10%;
             margin: 25px auto; 
             text-align: center; 
             padding: 5px;
-            border: 4px solid lightsalmon; 
+            border: 2px solid darkblue; 
             border-collapse : collapse;
         }
 
+        .leaflet-interactive:focus {
+            outline: none;
+        }
 
         .card-container {
             display: flex;
@@ -44,11 +41,18 @@
             padding-top: 11rem;
         }
 
+        .bottom-row {
+            display: flex;
+             flex-direction: row;
+            gap: 1rem;
+            flex-wrap: wrap; /* 카드가 넘칠 경우 줄바꿈 허용 */
+
+        }
+
         .card {
-            flex: 1 1 500px;
+            flex: 1 1 450px;
             flex-grow: 25%;
-            min-height: 40vh;
-            height: 40vh;
+            /*min-height: 60vh;*/
             background-color: #4444;
             border-radius: 1rem;
             padding: 1rem;
@@ -60,39 +64,36 @@
             
         }
 
-
     </style>
 
 </head>
 <body>
     {% include 'web_app/header.html' %}
 
+    
     <div class="card-container">
-    
         <div class="card">
-            <h3>Data View 📊</h3>
-                {% load static %}
-                <img src="{% static data_path %}" width="100%" height="100%" >
-                <br>
-            </p>
+            <h3>관측소/선적항 위치정보🗺️</h3>
+            <div style="width: 100%; height: 400px;">{{ map | safe }}</div>
+        </div>
+        <div class="bottom-row">
+            <div class="card">
+                <h3>출하중량 데이터 시각화📊</h3>
+                    <img src="{% static data_path %}" width="100%" height="100%">
+            </div>
+                        
+            <div class="card">
+                <h3>수온데이터 상관관계🌡️</h3>
+                <img src="{% static htm_path %}" width="100%" height="100%">
+            </div>
         </div>
         <div class="card">
-            <h3>Data Table 📊</h3>
-            <p>{{ data_list | safe}}</p>
+                <h3>월별 출하량🎣</h3>
+                <img src="{% static grp_path %}" width="100%" height="100%">
+                <!--p>{{ data_list | safe }}</p-->
         </div>
-
-        <div class="card">
-            <h3>Map View 🗺️</h3>
-            <div style="width: 100%; height: calc(100% - 2rem);;" >{{ map | safe }}</div>
-        </div>
-        <div class="card">
-            <h3>Map Table 🗺️</h3>
-            <p>{{ map_list | safe }}</p>
-        </div>
-    </div>
-
-    
-    {% include 'web_app/footer.html' %}
-
+    <br><br>
+  
 </body>
+  {% include 'web_app/footer.html' %}
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}관측소별 페어플롯{% endblock %}</title>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;/* 카드보다 높게 설정 */
+            background-color: #ffffff; /* 배경색 없으면 카드가 비쳐 보일 수 있음 */ 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 선택 사항: 아래 그림자 */
+        }
+
+        /* 기존 스타일 유지 */
+        body {
+            margin-top: 10rem;
+            color: #111111;
+            background: #fff;
+            font-family: 'SUIT-Regular', sans-serif;
+            
+        }
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    {% include 'web_app/header.html' %}
+    <br>
+    <h2>지역별 페어플롯 이미지 보기</h2>
+
+    <form method="get" action="{% url 'web_app:pairplot' %}">
+        <label for="location">지역 선택:</label>
+        <select name="location" id="location" onchange="this.form.submit()">
+        <option value="">-- 지역을 선택하세요 --</option>
+        {% for loc in locations %}
+            <option value="{{ loc }}" {% if loc == selected_location %}selected{% endif %}>{{ loc }}</option>
+        {% endfor %}
+        </select>
+    </form>
+    <div style = "min-height: 400px; padding-bottom: 40px;" >
+        {% if image_path %}
+            <div style="text-align: center;">
+                <!-- 썸네일 이미지 -->
+                <img id="thumbnail" src="{% static image_path %}" alt="{{ selected_location }} 이미지" style="max-width: 400px; cursor: zoom-in;">
+            </div>
+
+            <!-- 모달 구조 -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
+            <script>
+                const modal = document.getElementById("imageModal");
+                const modalImg = document.getElementById("modalImage");
+                const thumbnail = document.getElementById("thumbnail");
+
+                if (thumbnail) {
+                    thumbnail.onclick = function () {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                    };
+                }
+
+                function closeModal() {
+                    modal.style.display = "none";
+                }
+
+                // ESC 키로 닫기
+                window.addEventListener("keydown", function(e) {
+                    if (e.key === "Escape") closeModal();
+                });
+
+                // 모달 바깥 클릭 시 닫기
+                window.onclick = function(event) {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                };
+            </script>
+        {% endif %}
+    </div>
+    {% include 'web_app/footer.html' %}
+</body>
+</html>

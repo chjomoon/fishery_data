@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}관측소별 히트맵{% endblock %}</title>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;/* 카드보다 높게 설정 */
+            background-color: #ffffff; /* 배경색 없으면 카드가 비쳐 보일 수 있음 */ 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 선택 사항: 아래 그림자 */
+        }
+
+        /* 기존 스타일 유지 */
+        body {
+            margin-top: 120px;
+            color: #111111;
+            background: #fff;
+            font-family: 'SUIT-Regular', sans-serif;
+            
+        }
+        .heatmap-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            text-align : center;
+            gap: 50px;
+            min-height: 400px;
+            padding-left : 40px;
+            padding-bottom: 40px;
+        }
+        .heatmap-item {
+            width: 40%;
+            cursor: pointer;
+        }
+        .heatmap-item img {
+            width: 100%;
+            height: auto;
+            border: 5px solid #ccc;
+            transition: transform 0.2s;
+        }
+        .heatmap-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+        }
+        .modal-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    {% include 'web_app/header.html' %}
+    <br>
+    <h2>지역별 히트맵 이미지 보기</h2>
+
+    <form method="get" action="{% url 'web_app:heatmap' %}">
+    <label for="location">지역 선택:</label>
+    <select name="location" id="location" onchange="this.form.submit()">
+        <option value="">-- 지역을 선택하세요 --</option>
+        {% for loc in locations %}
+        <option value="{{ loc }}" {% if loc == selected_location %}selected{% endif %}>{{ loc }}</option>
+        {% endfor %}
+    </select>
+    </form>
+    <br>
+    {% if labeled_images %}
+        <div class="heatmap-gallery">
+            {% for item in labeled_images %}
+            <div class="heatmap-item">
+                <img src="{% static item.src %}" alt="Heatmap" onclick="openModal('{% static item.src %}')">
+                <p style="text-align: center; color: black; margin-top: 5px;">{{ item.label }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="heatmap-gallery">
+            <p>선택된 지역에 대한 히트맵 이미지가 없습니다.</p>
+        </div>
+    {% endif %}
+    <!--
+    {% if image_paths %}
+    <div class="heatmap-gallery">
+        {% for img in image_paths %}
+        <div class="heatmap-item">
+            <img src="{% static img %}" alt="Heatmap" onclick="openModal('{% static img %}')">
+            <p> {{img}} </p>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="heatmap-gallery">
+        <p>선택된 지역에 대한 히트맵 이미지가 없습니다.</p>
+    </div>
+    {% endif %}
+    -->
+    <!-- 모달 구조 -->
+    <div id="imgModal" class="modal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+    function openModal(src) {
+        document.getElementById("imgModal").style.display = "block";
+        document.getElementById("modalImage").src = src;
+    }
+
+    function closeModal() {
+        document.getElementById("imgModal").style.display = "none";
+    }
+
+    // ESC 키로 닫기
+    window.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") {
+        closeModal();
+        }
+    });
+    </script>
+    </div>
+    {% include 'web_app/footer.html' %}
+</body>
+</html>

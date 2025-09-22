@@ -6,38 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <style>
-       footer {
-          text-align : center;
-          background-color: lightcoral;
-          color: #ffffff;
-          height: 160px;
-        }
-        footer .w1200 {    
-          min-height: 100px;
-          display: flex;
-          flex-direction: column-reverse;
-          justify-content: flex-end; /* 하단 정렬 */
-          padding-top: 50px;
-        }
-        .w1200 {
+        footer {
+          position: static;
+          bottom: 0px;
+          left: 0;
           width: 100%;
-          margin: auto;
-          
-       }
-        
+          text-align: center;
+          background-color: #2b95cd;
+          color: #ffffff;
+          height: 9.5rem;
+          z-index: 1000;
+        }
+
+        footer .w1200 {    
+          height: 100%;  /* 고정 높이로 설정 */
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;  /* 하단 정렬 */
+          align-items: center;        /* 가운데 정렬 */
+          padding: 15px 10px;
+          box-sizing: border-box;
+          font-size: 1.5rem;
+        }
+
+        footer a {
+          color: white;             /* 링크 텍스트 흰색 */
+          text-decoration: none;    /* 밑줄 제거 */
+          font-weight: bold;
+        }
+
+        footer a:hover {
+          text-decoration: underline;
+        }
+
+        footer h3 {
+          margin: 5px 0;
+          font-size: 2rem;
+        }
+
+        footer p {
+          margin: 0;
+          font-size: 0.9rem;
+        }
     </style>
   </head>
   <body>
     <footer>
-      <div class = "w1200">
-        <div style="font-size: 1.5rem;">
-            <span>item1</span> |
-            <span>item2</span> |
-            <span>item3</span>
+      <div class="w1200">
+        <div style="font-size: 2rem;">
+          <span><a href="{% url 'web_app:project' %}">🐳4조 프로젝트소개</a></span>
         </div>
-        <div>
-            <h3>4조참치</h3>
-        </div>
+        <p>Copyright © 2025 4조참치®. All rights reserved.</p>
       </div>
     </footer>
 
