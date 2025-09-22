@@ -2,7 +2,9 @@
 import pandas as pd
 ### 숫자 데이터 처리 
 import numpy as np
-
+import os
+import matplotlib
+matplotlib.use("Agg") 
 ### 파이썬에서 가장 기본적으로 사용하는 시각화 라이브러리
 import matplotlib.pyplot as plt
 
@@ -10,8 +12,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 ### 한글처리(시각화 시 그래프 내에 한글이 포함되는 경우 한글 깨짐 현상 방지)
-plt.rc("font", family="Malgun Gothic")
-
+#plt.rc("font", family="Malgun Gothic")
+plt.rc('font', family='AppleGothic')   # macOS
 ### 특수기호(마이너스 기호) 처리
 plt.rcParams["axes.unicode_minus"] = False
 
@@ -48,16 +50,17 @@ class Data_View:
       print('data view initialized\n')
       self.initDataFrame()
       self.data_preprocess()
-      self.initVisualization()
-      self.saveFig()
+      #self.initVisualization()
+      #self.saveFig()
+      self.get_pairplot()
 
     def initDataFrame(self):
-      self.file_name = "./web_app/data_view/data/01_Real_Estate_List.csv"
+      self.file_name = "./web_app/data_view/data/yr_table.csv"
       self.df = pd.read_csv(self.file_name, encoding='utf-8')
-      print(self.df.head())
+      #print(self.df.head())
 
     def data_preprocess(self):
-       self.correlation_matrix = self.df.corr()
+       self.correlation_matrix = self.df.pivot_table(index='지점명', columns='연도', values='출하중량', aggfunc='sum')
        print(self.correlation_matrix)
 
     def scaler_process(scaler, train_input):
@@ -80,3 +83,35 @@ class Data_View:
     def saveFig(self):
       self.fig.savefig("./web_app/static/web_app/images/fig.png")
       print(self.fig)
+
+    def get_pairplot(self):
+      # 파일경로/URL경로 정의
+      #/Users/chjo_moon/Desktop/PJT_Web/web_app/static/web_app/images/climate_graphs_pairplot
+      dir = "./web_app/static/web_app/images/climate_graphs_pairplot/"
+      file_list = os.listdir(dir)
+      static_dir = '/web_app/images/climate_graphs_pairplot/' 
+
+      # file path 수집후 Dictionary Return
+      f_path = {}
+      for f in file_list:
+        f_path[f.split('_')[0]] = f_path.get(f.split('_')[0],static_dir+f)
+      return f_path
+    
+    def get_heatmap(self):
+      # 파일경로/URL경로 정의
+      dir = "./web_app/static/web_app/images/climate_heatmaps/"
+      file_list = os.listdir(dir)
+      static_dir = '/web_app/images/climate_heatmaps/' 
+      f_path = {}
+
+      for f in file_list:
+        # 지역명 추출 (예: '가거도')
+        region = f.split('_')[0]
+        # 파일 경로 생성
+        full_path = static_dir + f
+        # 리스트에 추가
+        if region not in f_path:
+            f_path[region] = []
+        f_path[region].append(full_path)
+
+      return f_path
