@@ -32,6 +32,7 @@
 3. 별도 메뉴에서 데이터 분석, 프로젝트 소개, 팀 소개 확인 가능
 
 ### 실행방법
-````./fishery_data/
- > python manage.py runserver````
+````
+ ./fishery_data/
+ > python manage.py runserver
 
